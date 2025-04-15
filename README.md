@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# De Mi Para Ti Pastelería 🍰
 
-## Getting Started
+Bienvenidos al repositorio oficial del sitio web para **De Mi Para Ti Pastelería**, un emprendimiento artesanal especializado en pasteles personalizados para todo tipo de ocasiones.
 
-First, run the development server:
+Este proyecto busca reflejar una imagen **moderna, cálida y profesional**, ofreciendo a los usuarios una experiencia visual atractiva y una forma directa de contacto mediante WhatsApp.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tecnologías utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 14.2.26** – Framework de React para renderizado SSR/SSG
+- **React 18** – Librería base para construir interfaces
+- **Tailwind CSS** – Utilidades CSS para un diseño ágil y responsive
+- **ShadCN** – Componentes accesibles y listos para usar con Tailwind
+- **WhatsApp API** – Para permitir contacto directo desde la web
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📁 Estructura de la web
 
-To learn more about Next.js, take a look at the following resources:
+Basada en la propuesta visual, la web incluye las siguientes secciones:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1. Inicio
+- Logo y navegación clara.
+- Hero con imágenes atractivas y CTA a WhatsApp.
+- Introducción del emprendimiento.
+- Ventajas destacadas.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. Sobre Mí
+- Historia personal.
+- Foto de la emprendedora.
+- Valores del proyecto.
+### - Opiniones
+- Comentarios reales de clientes satisfechos, opcionalmente con fotos o contacto.
 
-## Deploy on Vercel
+### 3. Productos
+- Categorías como:
+  - Pasteles para cumpleaños
+  - Bodas
+  - Cupcakes personalizados
+  - Eventos especiales
+- Cada categoría incluye imagen, descripción y botón de contacto.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. Galería
+- Muestra visual de trabajos anteriores.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### 6. Contacto
+- Botón de WhatsApp destacado.
+- Email, horarios y ubicación.
+- Enlaces a redes sociales (especialmente Instagram).
+
+---
+
+## ✨ Estilo y diseño
+
+- Paleta de colores en tonos **pastel y cálidos**.
+- Tipografía amigable y fácil de leer.
+- Diseño adaptado a **dispositivos móviles**.
+- Optimización básica SEO para búsquedas locales.
+
+---
+
+## 🚀 Cómo iniciar el proyecto localmente
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/de-mi-para-ti-pasteleria.git
+   cd de-mi-para-ti-pasteleria
