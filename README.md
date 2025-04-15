@@ -58,3 +58,4 @@ Basada en la propuesta visual, la web incluye las siguientes secciones:
 - Tipografía amigable y fácil de leer.
 - Diseño adaptado a **dispositivos móviles**.
 - Optimización básica SEO para búsquedas locales.
+
