@@ -27,7 +27,7 @@ export default function Navbar() {
       </div>
 
       <div className="flex-1 flex justify-center md:justify-start">
-        <Link href="/inicio" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image src={Logo} alt="De Mi Para Ti Logo" width={80} height={30} />
         </Link>
       </div>
@@ -35,7 +35,7 @@ export default function Navbar() {
         <NavigationMenu>
           <NavigationMenuList className="flex gap-6 items-center">
             <NavigationMenuItem>
-              <Link href="/inicio" legacyBehavior passHref>
+              <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink>
                   <span className="navlink text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors">
                     Inicio
