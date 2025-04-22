@@ -97,7 +97,7 @@ export default function Navbar() {
           <nav className="p-4">
             <ul className="flex flex-col space-y-4">
               <li>
-                <Link href="/inicio" legacyBehavior passHref>
+                <Link href="/" legacyBehavior passHref>
                   <a
                     onClick={() => setMenuOpen(false)}
                     className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
