@@ -27,7 +27,7 @@ export default function Navbar() {
       </div>
 
       <div className="flex-1 flex justify-center md:justify-start">
-        <Link href="./" className="flex items-center">
+        <Link href="/inicio" className="flex items-center">
           <Image src={Logo} alt="De Mi Para Ti Logo" width={80} height={30} />
         </Link>
       </div>
@@ -35,7 +35,7 @@ export default function Navbar() {
         <NavigationMenu>
           <NavigationMenuList className="flex gap-6 items-center">
             <NavigationMenuItem>
-              <Link href="./" legacyBehavior passHref>
+              <Link href="/inicio" legacyBehavior passHref>
                 <NavigationMenuLink>
                   <span className="navlink text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors">
                     Inicio
@@ -55,7 +55,7 @@ export default function Navbar() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href="#productos" legacyBehavior passHref>
+              <Link href="/productos" legacyBehavior passHref>
                 <NavigationMenuLink>
                   <span className="navlink text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors">
                     Productos
@@ -97,7 +97,7 @@ export default function Navbar() {
           <nav className="p-4">
             <ul className="flex flex-col space-y-4">
               <li>
-                <Link href="/home" legacyBehavior passHref>
+                <Link href="/inicio" legacyBehavior passHref>
                   <a
                     onClick={() => setMenuOpen(false)}
                     className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
@@ -107,7 +107,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" legacyBehavior passHref>
+                <Link href="/sobremi" legacyBehavior passHref>
                   <a
                     onClick={() => setMenuOpen(false)}
                     className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
@@ -117,7 +117,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="#productos" legacyBehavior passHref>
+                <Link href="/productos" legacyBehavior passHref>
                   <a
                     onClick={() => setMenuOpen(false)}
                     className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
