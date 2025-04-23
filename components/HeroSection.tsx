@@ -14,22 +14,22 @@ import img7 from "@/app/public/img/hero/hero7.png";
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#FFF6EA] w-full min-h-screen flex items-center justify-center">
+    <section className="bg-[#FFF6EA] w-full flex items-center justify-center">
       <div className="grid grid-cols-6 grid-rows-3 gap-3 w-full max-w-7xl h-[80vh] px-4">
         
         {/* 1: grande tall arriba-izq (col 1-2 / row 1-2) */}
         <div className="col-span-2 row-span-2 relative rounded-lg overflow-hidden shadow-lg">
-          <Image src={img1} alt="" fill className="object-cover" />
+          <Image src={img3} alt="" fill className="object-cover" />
         </div>
 
         {/* 2: pequeña top centro-izq (col 3 / row 1) */}
         <div className="col-start-3 row-start-1 relative rounded-lg overflow-hidden shadow-lg">
-          <Image src={img2} alt="" fill className="object-cover" />
+          <Image src={img1} alt="" fill className="object-cover" />
         </div>
         
         {/* 3: pequeña top centro (col 4 / row 1) */}
         <div className="col-start-4 row-start-1 relative rounded-lg overflow-hidden shadow-lg">
-          <Image src={img3} alt="" fill className="object-cover" />
+          <Image src={img2} alt="" fill className="object-cover" />
         </div>
         
         {/* 4: grande tall arriba-der (col 5-6 / row 1-2) */}
