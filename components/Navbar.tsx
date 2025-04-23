@@ -18,7 +18,7 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="w-full bg-[#FFF6EA] shadow-md py-4 px-6 flex items-center justify-between relative">
+    <header className="w-full bg-[#FFF6EA] py-3 px-5 flex items-center justify-between relative">
 
       <div className="flex items-center md:hidden">
         <button onClick={toggleMenu} className="p-2">
