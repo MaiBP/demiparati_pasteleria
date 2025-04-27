@@ -1,10 +1,9 @@
+// components/Navbar.tsx
 "use client";
 
-import Logo from "../app/public/img/logo.png";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiMenu, FiX } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import {
   NavigationMenu,
@@ -12,34 +11,34 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import HamburgerToggle from "@/components/HamburguerToggle";
+import Logo from "../app/public/img/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="w-full bg-[#FFF6EA] py-3 px-5 flex items-center justify-between relative">
-
-      <div className="flex items-center md:hidden">
-        <button onClick={toggleMenu} className="p-2">
-          {menuOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-2xl" />}
-        </button>
+    <header className="w-full bg-[#FFF6EA] py-3 px-5 relative flex items-center justify-between">
+      {/* Móvil: Hamburger */}
+      <div className="md:hidden">
+        <HamburgerToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
 
+      {/* Logo */}
       <div className="flex-1 flex justify-center md:justify-start">
-        <Link href="/" className="flex items-center">
+        <Link href="/">
           <Image src={Logo} alt="De Mi Para Ti Logo" width={80} height={30} />
         </Link>
       </div>
+
+      {/* Escritorio: Menú centrado */}
       <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
         <NavigationMenu>
           <NavigationMenuList className="flex gap-6 items-center">
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink>
-                  <span className="navlink text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors">
-                    Inicio
-                  </span>
+                  <span className="navlink">Inicio</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -47,9 +46,7 @@ export default function Navbar() {
             <NavigationMenuItem>
               <Link href="/sobremi" legacyBehavior passHref>
                 <NavigationMenuLink>
-                  <span className="navlink text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors">
-                    Sobre mí
-                  </span>
+                  <span className="navlink">Sobre mí</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -57,9 +54,7 @@ export default function Navbar() {
             <NavigationMenuItem>
               <Link href="/productos" legacyBehavior passHref>
                 <NavigationMenuLink>
-                  <span className="navlink text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors">
-                    Productos
-                  </span>
+                  <span className="navlink">Productos</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -67,22 +62,20 @@ export default function Navbar() {
             <NavigationMenuItem>
               <Link href="#galeria" legacyBehavior passHref>
                 <NavigationMenuLink>
-                  <span className="navlink text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors">
-                    Galería
-                  </span>
+                  <span className="navlink">Galería</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
-            {/* WhatsApp Contact Icon */}
+            {/* WhatsApp */}
             <NavigationMenuItem>
               <Link href="https://wa.me/549XXXXXXXXXX" legacyBehavior passHref>
-                <NavigationMenuLink className="whatsapp-link" aria-label="WhatsApp Contact">
-                  <div className="whatsapp-container relative flex items-center justify-center ml-6">
-                    <div className="flex items-center justify-center bg-green-500 rounded-full w-10 h-10 text-white">
+                <NavigationMenuLink>
+                  <div className="whatsapp-container relative flex items-center ml-4">
+                    <div className="bg-green-500 rounded-full w-10 h-10 flex items-center justify-center text-white">
                       <FaWhatsapp className="text-2xl" />
                     </div>
-                    <span className="whatsapp-label pointer-events-none absolute whitespace-nowrap text-sm text-gray-700 bg-white px-2 py-1 rounded-md shadow-md left-full ml-2 opacity-0 translate-x-2 transition-all duration-300">
+                    <span className="whatsapp-label absolute left-full ml-2 whitespace-nowrap bg-white px-2 py-1 rounded-md shadow-md text-sm text-gray-700 opacity-0 transition-all duration-300">
                       ¡Quiero mi torta!
                     </span>
                   </div>
@@ -92,50 +85,30 @@ export default function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
+
+      {/* Móvil: Menú desplegable */}
       {menuOpen && (
-        <div className="md:hidden absolute z-50 top-full left-0 w-full bg-[#FFF6EA] shadow-md">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#FFF6EA] shadow-md z-50">
           <nav className="p-4">
             <ul className="flex flex-col space-y-4">
-              <li>
-                <Link href="/" legacyBehavior passHref>
-                  <a
-                    onClick={() => setMenuOpen(false)}
-                    className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
-                  >
-                    <span className="navlink">Inicio</span>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/sobremi" legacyBehavior passHref>
-                  <a
-                    onClick={() => setMenuOpen(false)}
-                    className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
-                  >
-                    <span className="navlink">Sobre mí</span>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/productos" legacyBehavior passHref>
-                  <a
-                    onClick={() => setMenuOpen(false)}
-                    className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
-                  >
-                    <span className="navlink">Productos</span>
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#galeria" legacyBehavior passHref>
-                  <a
-                    onClick={() => setMenuOpen(false)}
-                    className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
-                  >
-                    <span className="navlink">Galería</span>
-                  </a>
-                </Link>
-              </li>
+              {[
+                { href: "/", label: "Inicio" },
+                { href: "/sobremi", label: "Sobre mí" },
+                { href: "/productos", label: "Productos" },
+                { href: "#galeria", label: "Galería" },
+              ].map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} legacyBehavior passHref>
+                    <a
+                      onClick={() => setMenuOpen(false)}
+                      className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
+                    >
+                      {label}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+
               <li>
                 <Link href="https://wa.me/549XXXXXXXXXX" legacyBehavior passHref>
                   <a
@@ -145,7 +118,7 @@ export default function Navbar() {
                     <div className="bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
                       <FaWhatsapp className="text-2xl" />
                     </div>
-                    <span>¡Quiero mi torta!</span>
+                    ¡Quiero mi torta!
                   </a>
                 </Link>
               </li>
@@ -154,29 +127,34 @@ export default function Navbar() {
         </div>
       )}
 
+      {/* Estilos específicos */}
       <style jsx>{`
-        /* Underline hover effect for generic navlinks */
+        /* Underline animado para los links */
         .navlink {
           position: relative;
           display: inline-block;
+          font-size: 1rem;
+          font-weight: 500;
+          color: #4a4a4a;
+          padding: 0.25rem 0;
         }
         .navlink::after {
           content: "";
           position: absolute;
           left: 0;
-          bottom: -2px;
+          bottom: -1px;
           width: 100%;
           height: 2px;
-          background: currentColor;
-          transform: translateY(10px);
+          background: #ffb510;
+          transform: translateY(8px);
           opacity: 0;
         }
         .navlink:hover::after {
-          animation: writeUnderline 0.5s forwards;
+          animation: writeUnderline 0.3s forwards;
         }
         @keyframes writeUnderline {
           0% {
-            transform: translateY(10px);
+            transform: translateY(8px);
             opacity: 0;
           }
           50% {
@@ -184,17 +162,22 @@ export default function Navbar() {
             opacity: 1;
           }
           100% {
-            transform: translateY(5px);
+            transform: translateY(4px);
             opacity: 1;
           }
         }
-        /* WhatsApp-specific hover for its label */
+
+        /* Etiqueta WhatsApp */
         .whatsapp-container:hover .whatsapp-label {
           opacity: 1;
           transform: translateX(0);
+        }
+        .whatsapp-label {
+          transform: translateX(4px);
         }
       `}</style>
     </header>
   );
 }
+
 
