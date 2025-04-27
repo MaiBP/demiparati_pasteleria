@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaWhatsapp } from "react-icons/fa";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -15,9 +14,27 @@ import Logo from "../app/public/img/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detectar scroll
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="w-full bg-[#FFF6EA] py-3 px-5 relative flex items-center justify-between">
+    <header
+      className={[
+        "w-full py-3 px-5 flex items-center justify-between transition-all duration-300",
+        "sticky top-0 z-50",
+        isScrolled
+          ? "backdrop-blur-md bg-[#FFF6EA]/80 shadow-md"
+          : "bg-[#FFF6EA]"
+      ].join(" ")}
+    >
       {/* Móvil: Hamburger */}
       <div className="md:hidden">
         <HamburgerToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
@@ -41,7 +58,6 @@ export default function Navbar() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-
             <NavigationMenuItem>
               <Link href="/sobremi" legacyBehavior passHref>
                 <NavigationMenuLink>
@@ -49,7 +65,6 @@ export default function Navbar() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-
             <NavigationMenuItem>
               <Link href="/productos" legacyBehavior passHref>
                 <NavigationMenuLink>
@@ -57,27 +72,10 @@ export default function Navbar() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-
             <NavigationMenuItem>
               <Link href="#galeria" legacyBehavior passHref>
                 <NavigationMenuLink>
                   <span className="navlink">Galería</span>
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-
-            {/* WhatsApp */}
-            <NavigationMenuItem>
-              <Link href="https://wa.me/549XXXXXXXXXX" legacyBehavior passHref>
-                <NavigationMenuLink>
-                  <div className="whatsapp-container relative flex items-center ml-4">
-                    <div className="bg-green-500 rounded-full w-10 h-10 flex items-center justify-center text-white">
-                      <FaWhatsapp className="text-2xl" />
-                    </div>
-                    <span className="whatsapp-label absolute left-full ml-2 whitespace-nowrap bg-white px-2 py-1 rounded-md shadow-md text-sm text-gray-700 opacity-0 transition-all duration-300">
-                      ¡Quiero mi torta!
-                    </span>
-                  </div>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -107,20 +105,6 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
-
-              <li>
-                <Link href="https://wa.me/549XXXXXXXXXX" legacyBehavior passHref>
-                  <a
-                    onClick={() => setMenuOpen(false)}
-                    className="flex items-center gap-3 text-lg font-medium text-green-600 hover:text-green-700 transition-colors"
-                  >
-                    <div className="bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center">
-                      <FaWhatsapp className="text-2xl" />
-                    </div>
-                    ¡Quiero mi torta!
-                  </a>
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>
@@ -128,7 +112,7 @@ export default function Navbar() {
 
       {/* Estilos específicos */}
       <style jsx>{`
-        /* Underline animado para los links */
+        /* Underline animado para desktop */
         .navlink {
           position: relative;
           display: inline-block;
@@ -166,7 +150,7 @@ export default function Navbar() {
           }
         }
 
-        /* Etiqueta WhatsApp */
+        /* WhatsApp tooltip */
         .whatsapp-container:hover .whatsapp-label {
           opacity: 1;
           transform: translateX(0);
@@ -178,5 +162,6 @@ export default function Navbar() {
     </header>
   );
 }
+
 
 
