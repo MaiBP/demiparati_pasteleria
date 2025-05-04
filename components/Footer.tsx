@@ -31,12 +31,12 @@ export default function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center md:justify-end justify-center gap-6">
           <nav className="flex space-x-4">
-            <Link
+            {/* <Link
               href="#contacto"
               className="hover:text-pink-600 transition-colors"
             >
               Contacto
-            </Link>
+            </Link> */}
             <Link
               href="#galeria"
               className="hover:text-pink-600 transition-colors"

@@ -14,7 +14,7 @@ export default function AnimatedText() {
         </div>
         <div className="role">
           <div className="block"></div>
-          <p>tortas únicas</p>
+          <p>pasteleria única</p>
         </div>
       </div>
 
