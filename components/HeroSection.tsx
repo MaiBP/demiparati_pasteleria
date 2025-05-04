@@ -10,7 +10,7 @@ import img3 from "@/app/public/img/hero/hero3.png";
 import img4 from "@/app/public/img/hero/hero4.png";
 import img5 from "@/app/public/img/hero/hero5.png";
 import img6 from "@/app/public/img/hero/hero6.png";
-import img7 from "@/app/public/img/hero/hero7.png";
+// import img7 from "@/app/public/img/hero/hero7.png";
 
 export default function HeroSection() {
   return (
@@ -23,12 +23,12 @@ export default function HeroSection() {
         </div>
 
         {/* 2: pequeña top centro-izq (col 3 / row 1) */}
-        <div className="col-start-3 row-start-1 relative rounded-lg overflow-hidden shadow-lg">
-          <Image src={img1} alt="" fill className="object-cover" />
-        </div>
+        {/* <div className="col-start-3 row-start-1 relative rounded-lg overflow-hidden shadow-lg">
+          <Image src={img7} alt="" fill className="object-cover" />
+        </div> */}
         
         {/* 3: pequeña top centro (col 4 / row 1) */}
-        <div className="col-start-4 row-start-1 relative rounded-lg overflow-hidden shadow-lg">
+        <div className="col-start-3 row-start-1 col-span-2 relative rounded-lg overflow-hidden shadow-lg">
           <Image src={img2} alt="" fill className="object-cover" />
         </div>
         
@@ -44,7 +44,7 @@ export default function HeroSection() {
 
         {/* 6: pequeña bottom-izq (col 1-2 / row 3) */}
         <div className="col-span-2 row-start-3 relative rounded-lg overflow-hidden shadow-lg">
-          <Image src={img5} alt="" fill className="object-cover" />
+          <Image src={img1} alt="" fill className="object-cover" />
         </div>
 
         {/* 7: mediana bottom-centro (col 3-4 / row 3) */}
@@ -54,7 +54,7 @@ export default function HeroSection() {
 
         {/* 8: pequeña bottom-der (col 5-6 / row 3) */}
         <div className="col-start-5 col-span-2 row-start-3 relative rounded-lg overflow-hidden shadow-lg">
-          <Image src={img7} alt="" fill className="object-cover" />
+          <Image src={img5} alt="" fill className="object-cover" />
         </div>
       </div>
     </section>
