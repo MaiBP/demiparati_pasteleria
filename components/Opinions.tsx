@@ -18,7 +18,7 @@ export default function Opinions() {
               ))}
             </div>
             <p className="text-gray-700 italic mb-4">
-              &quot;Las tortas son deliciosas! El diseño y el sabor superaron mis expectativas.&quot;
+              &quot;Las tortas son muy ricas! El diseño supero mis expectativas.&quot;
             </p>
             <p className="font-semibold text-gray-800">Laura</p>
           </div>
