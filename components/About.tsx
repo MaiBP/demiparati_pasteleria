@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import aboutImg from "@/app/public/img/aboutImg.png"; // tu imagen de Estefa
+import aboutImg from "@/app/public/img/aboutImg.png";
 
 export default function About() {
   return (
