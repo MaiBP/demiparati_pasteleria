@@ -2,19 +2,19 @@
 
 import Image from "next/image";
 import aboutImage from "@/app/public/img/aboutImg.png"; // tu imagen de Estefa
-import aboutBG from "@/app/public/img/aboutBG.png";     // tu PNG de fondo
+// import aboutBG from "@/app/public/img/aboutBG.png";     // tu PNG de fondo
 
 
 export default function About() {
   return (
     <section className="relative w-full bg-[#FFF6EA] overflow-hidden">
       {/* Fondo en PNG */}
-      <Image
+      {/* <Image
         src={aboutBG}
         alt="Background"
         fill
         className="absolute inset-0 object-cover object-center opacity-30 -z-10"
-      />
+      /> */}
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 py-20 px-6 md:px-8 items-center">
         {/* === TEXTO === */}
