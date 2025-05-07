@@ -17,14 +17,14 @@ export default function About() {
       />
 
       {/* Contenido principal */}
-      <div className="relative z-10  mx-auto grid grid-cols-1 md:grid-cols-2 gap-15 py-20 px-6 md:px-8 items-center bg-[#F4D3A1]/60">
+      <div className="relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-15 py-20 px-6 md:px-8 items-center bg-[#F4D3A1]/50">
         {/* === TEXTO === */}
         <div className="space-y-6">
           <span className="text-pink-500 font-medium uppercase">
-          Sobre mi 🍰
+          Sobre mi 🎂
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-          👋🏼 Buenas! Soy Estefania
+           Buenas! Soy Estefania
           </h2>
           <p className="text-gray-700 leading-relaxed">
             Soy el corazón y alma detrás de este emprendimiento. Mi amor por la

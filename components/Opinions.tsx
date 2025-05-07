@@ -7,7 +7,7 @@ export default function Opinions() {
     <section className="bg-[#F4D3A1] py-8 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-800 mb-5">
-          Opiniones
+          🍪 Mis clientes 🧁
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
