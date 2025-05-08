@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Link from "next/link";
-// import Image from "next/image";
-import categorias from "@/app/data/categories.json"; // importa el JSON
+import categorias from "@/app/data/categories.json";
 
 type Categoria = {
   slug: string;
@@ -31,13 +31,12 @@ export default function Products() {
             href={`/productos/${cat.slug}`}
             className="group block bg-[#FFF6EA] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow h-full"
           >
-            <div className="relative w-full h-80 md:h-96">
-              {/* <Image
+            <div className="w-full h-80 md:h-96 relative">
+              <img
                 src={cat.imagen}
                 alt={cat.nombre}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform"
-              /> */}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+              />
             </div>
             <div className="p-6">
               <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-pink-600 transition-colors">

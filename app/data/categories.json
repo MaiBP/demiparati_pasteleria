@@ -2,29 +2,30 @@
   {
     "slug": "infantiles",
     "nombre": "Infantiles",
-   "imagen": "/img/categoria-infantiles.jpg", 
-    "imagen2": "/img/categoria-infantiles-2.jpg",
-    "descripcion": "Tortas y cupcakes temáticos para cumpleaños infantiles, con personajes y colores divertidos."
+    "imagen": "/img/infantiles.png",
+    "imagen2": "/img/infantiles.png",
+    "descripcion": "Tortas y cupcakes temáticos..."
   },
   {
     "slug": "eventos-especiales",
     "nombre": "Eventos Especiales",
-    "imagen": "/img/categoria-eventos-especiales.jpg",
-    "imagen2": "/img/categoria-eventos-especiales-2.jpg",
-    "descripcion": "Diseños elegantes y personalizados para eventos corporativos y celebraciones especiales."
+    "imagen": "/img/evento.png",
+    "imagen2": "/img/evento.png",
+    "descripcion": "Diseños elegantes..."
   },
   {
     "slug": "bodas-quince",
     "nombre": "Bodas & Quince",
-    "imagen": "/img/categoria-bodas-quince.jpg",
-    "imagen2": "/img/categoria-bodas-quince-2.jpg",
-    "descripcion": "Tortas de bodas y quince años con detalles sofisticados y adaptados a tu estilo."
+    "imagen": "/img/quince.png",
+    "imagen2": "/img/quince.png",
+    "descripcion": "Tortas de bodas..."
   },
   {
     "slug": "mini-pasteleria",
     "nombre": "Mini Pastelería",
-    "imagen": "/img/categoria-mini-pasteleria.jpg",
-    "imagen2": "/img/categoria-mini-pasteleria-2.jpg",
-    "descripcion": "Selección de mini postres y bocaditos perfectos para mesas dulces y coffe breaks."
+    "imagen": "/img/minipasteleria.png",
+    "imagen2": "/img/minipasteleria.png",
+    "descripcion": "Selección de mini postres..."
   }
 ]
+

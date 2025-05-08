@@ -2,8 +2,8 @@
 "use client";
 
 import Image from "next/image";
-import aboutImg from "@/app/public/img/AboutImg.png";   // tu foto de Estefa
-import aboutBG from "@/app/public/img/aboutBG.png";     // tu fondo en PNG
+import aboutImg from "@/public/img/AboutImg.png";   // tu foto de Estefa
+import aboutBG from "@/public/img/aboutBG.png";     // tu fondo en PNG
 
 export default function About() {
   return (

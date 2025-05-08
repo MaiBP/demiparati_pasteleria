@@ -3,10 +3,10 @@
 import Image from "next/image";
 // IMPORTANTE: si tu imagen está en public/img/cupcakes.png, usa src={"/img/cupcakes.png"}
 // o bien impórtala así (asegúrate de que Next la resuelva correctamente):
-import cupcakesImg from "@/app/public/img/cupcakes.png";
-import llamacactusImg from "@/app/public/img/llama-cactus.png";
-import chocotortaImg from "@/app/public/img/chocotorta.png";
-import teamocookiesImg from "@/app/public/img/teamocookies.png";
+import cupcakesImg from "@/public/img/cupcakes.png";
+import llamacactusImg from "@/public/img/llama-cactus.png";
+import chocotortaImg from "@/public/img/chocotorta.png";
+import teamocookiesImg from "@/public/img/teamocookies.png";
 
 export default function FeaturesSection() {
   return (

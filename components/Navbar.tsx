@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import HamburgerToggle from "@/components/HamburguerToggle";
-import Logo from "../app/public/img/logo.png";
+import Logo from "@/public/img/logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

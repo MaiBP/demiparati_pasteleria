@@ -4,12 +4,12 @@ import Image from "next/image";
 import AnimatedText from "@/components/AnimatedText";
 
 // tus 7 imágenes
-import img1 from "@/app/public/img/hero/hero1.png";
-import img2 from "@/app/public/img/hero/hero2.png";
-import img3 from "@/app/public/img/hero/hero3.png";
-import img4 from "@/app/public/img/hero/hero4.png";
-import img5 from "@/app/public/img/hero/hero5.png";
-import img6 from "@/app/public/img/hero/hero6.png";
+import img1 from "@/public/img/hero/hero1.png";
+import img2 from "@/public/img/hero/hero2.png";
+import img3 from "@/public/img/hero/hero3.png";
+import img4 from "@/public/img/hero/hero4.png";
+import img5 from "@/public/img/hero/hero5.png";
+import img6 from "@/public/img/hero/hero6.png";
 // import img7 from "@/app/public/img/hero/hero7.png";
 
 export default function HeroSection() {
