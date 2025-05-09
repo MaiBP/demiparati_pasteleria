@@ -14,12 +14,12 @@ type Categoria = {
 
 export default function Products() {
   return (
-    <section id="productos" className="py-16 px-4 bg-white">
+    <section id="productos" className="py-16 px-4 bg-[#FFF6EA]">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033]">
           Nuestras Categorías
         </h2>
-        <p className="mt-2 text-gray-600">
+        <p className="mt-2 text-[#5C4033]">
           Elige una categoría para ver todos nuestros diseños.
         </p>
       </div>
@@ -29,7 +29,7 @@ export default function Products() {
           <Link
             key={cat.slug}
             href={`/productos/${cat.slug}`}
-            className="group block bg-[#FFF6EA] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow h-full"
+            className="group block bg-[#F4D3A1] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow h-full"
           >
             <div className="w-full h-80 md:h-96 relative">
               <img
@@ -39,7 +39,7 @@ export default function Products() {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-pink-600 transition-colors">
+              <h3 className="text-2xl font-semibold text-[#5C4033] group-hover:text-pink-600 transition-colors">
                 {cat.nombre}
               </h3>
             </div>

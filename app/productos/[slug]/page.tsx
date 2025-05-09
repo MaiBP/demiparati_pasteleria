@@ -21,9 +21,9 @@ export default function CategoriaPage({
   if (!cat) return notFound();
 
   return (
-    <main className="py-16 px-4">
-      <h1 className="text-4xl font-bold text-center mb-6">{cat.nombre}</h1>
-      <p className="max-w-2xl mx-auto text-center text-gray-700 mb-8">
+    <main className="py-16 px-4 bg-[#FFF6EA]">
+      <h1 className="text-4xl font-bold text-center mb-6 text-[#5C4033]">{cat.nombre}</h1>
+      <p className="max-w-2xl mx-auto text-center text-[#5C4033] mb-8">
         {cat.descripcion}
       </p>
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
