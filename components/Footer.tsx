@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start">
             <p className="font-semibold mb-1">Seguime</p>
             <Link
-              href="https://instagram.com/tu_cuenta"
+              href="https://www.instagram.com/demiparatipasteleria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               className="text-gray-700 hover:text-pink-600 transition-colors"
             >

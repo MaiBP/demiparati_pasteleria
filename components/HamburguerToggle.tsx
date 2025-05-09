@@ -79,8 +79,8 @@ export default function HamburgerToggle({
         }
         .hamburger__path {
           fill: none;
-          stroke: #222;
-          stroke-width: 50;
+          stroke: #5C4033;
+          stroke-width: 70;
           stroke-linecap: round;
           stroke-dasharray: 4400;
           stroke-dashoffset: 4200;
@@ -99,7 +99,7 @@ export default function HamburgerToggle({
         }
         .hamburger__input:checked + .hamburger__wrap .hamburger__path {
           stroke: #ffb510;
-          stroke-dashoffset: -4150;
+          stroke-dashoffset: -4140;
         }
       `}</style>
     </>
