@@ -1,7 +1,8 @@
 "use client";
 
-import { FaWhatsapp } from "react-icons/fa";
-
+// import { FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
+import cookie from "@/public/img/wappcookie.png"
 export default function FloatingWhatsApp() {
   return (
     <a
@@ -21,7 +22,8 @@ export default function FloatingWhatsApp() {
       `}
       aria-label="Contactar por WhatsApp"
     >
-      <FaWhatsapp />
+       <Image src={cookie} alt="" fill className="object-cover" />
+      {/* <FaWhatsapp /> */}
     </a>
   );
 }
