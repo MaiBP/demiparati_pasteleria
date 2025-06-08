@@ -3,7 +3,7 @@ import IntroSection from "@/components/IntroSection";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main>
       <HeroSection/>
       <IntroSection/>
     </main>

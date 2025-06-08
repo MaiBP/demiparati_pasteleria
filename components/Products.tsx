@@ -7,46 +7,48 @@ import categorias from "@/app/data/categories.json";
 type Categoria = {
   slug: string;
   nombre: string;
-  imagen: string;
-  imagen2: string;
+  portada: string;
+  imagen: string[];
   descripcion: string;
 };
 
-export default function Products() {
+export default function ProductsFullscreen() {
   return (
-    <section id="productos" className="py-16 px-4 bg-[#FFF6EA]">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#5C4033]">
-          Nuestras Categorías
-        </h2>
-        <p className="mt-2 text-[#5C4033]">
-          Elige una categoría para ver todos nuestros diseños.
-        </p>
-      </div>
+    <section className="w-screen h-screen grid grid-cols-2 grid-rows-2">
+      {(categorias as Categoria[]).map((cat) => (
+        <Link
+          key={cat.slug}
+          href={`/productos/${cat.slug}`}
+          className="group relative overflow-hidden"
+        >
+          {/* 1) Imagen de fondo: llena todo el área */}
+          <div className="absolute inset-0">
+            <img
+              src={cat.portada}
+              alt={cat.nombre}
+              className="w-full h-full object-cover scale-100 transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {(categorias as Categoria[]).map((cat) => (
-          <Link
-            key={cat.slug}
-            href={`/productos/${cat.slug}`}
-            className="group block bg-[#F4D3A1] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow h-full"
-          >
-            <div className="w-full h-80 md:h-96 relative">
-              <img
-                src={cat.imagen}
-                alt={cat.nombre}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-[#5C4033] group-hover:text-pink-600 transition-colors">
-                {cat.nombre}
-              </h3>
-            </div>
-          </Link>
-        ))}
-      </div>
+          {/* 2) Overlay que aparece al hover: aplica blur y oscurece ligeramente */}
+          <div className="absolute inset-0 bg-black/0 backdrop-blur-[0px] transition-all duration-300 group-hover:bg-black/40 group-hover:backdrop-blur-md flex items-center justify-center">
+            <h3 className="opacity-0 group-hover:opacity-100 text-white text-3xl md:text-5xl font-extrabold transition-opacity duration-300">
+              {cat.nombre}
+            </h3>
+          </div>
+        </Link>
+      ))}
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+
 

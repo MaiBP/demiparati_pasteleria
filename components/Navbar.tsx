@@ -72,13 +72,6 @@ export default function Navbar() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="#galeria" legacyBehavior passHref>
-                <NavigationMenuLink>
-                  <span className="navlink">Galería</span>
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
@@ -92,7 +85,7 @@ export default function Navbar() {
                 { href: "/", label: "Inicio" },
                 { href: "/sobremi", label: "Sobre mí" },
                 { href: "/productos", label: "Productos" },
-                { href: "#galeria", label: "Galería" },
+                // { href: "#galeria", label: "Galería" },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} legacyBehavior passHref>

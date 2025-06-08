@@ -1,31 +1,97 @@
 [
-  {
+    {
     "slug": "infantiles",
     "nombre": "Infantiles",
-    "imagen": "/img/infantiles.png",
-    "imagen2": "/img/infantiles.png",
-    "descripcion": "Tortas y cupcakes temáticos..."
-  },
-  {
+    "portada": "/img/infantiles/portada.png",
+    "imagen": [
+    "/img/infantiles/1.jpeg",
+    "/img/infantiles/2.jpeg",
+    "/img/infantiles/3.jpeg",
+    "/img/infantiles/4.jpeg",
+    "/img/infantiles/5.jpeg",
+    "/img/infantiles/6.jpeg",
+    "/img/infantiles/7.jpeg",
+    "/img/infantiles/8.jpeg",
+    "/img/infantiles/9.jpeg",
+    "/img/infantiles/10.jpeg"
+    ],
+    "descripcion": "Tortas y cupcakes temáticos para cumpleaños infantiles, con personajes y colores divertidos."
+    },
+    {
     "slug": "eventos-especiales",
     "nombre": "Eventos Especiales",
-    "imagen": "/img/evento.png",
-    "imagen2": "/img/evento.png",
-    "descripcion": "Diseños elegantes..."
-  },
-  {
+    "portada": "img/eventos-especiales/portada.png",
+    "imagen": [
+    "/img/eventos-especiales/1.jpeg",
+    "/img/eventos-especiales/2.jpeg",
+    "/img/eventos-especiales/3.jpeg",
+    "/img/eventos-especiales/4.jpeg",
+    "/img/eventos-especiales/5.jpeg",
+    "/img/eventos-especiales/6.jpeg",
+    "/img/eventos-especiales/7.jpeg",
+    "/img/eventos-especiales/8.jpeg",
+    "/img/eventos-especiales/9.jpeg",
+    "/img/eventos-especiales/10.jpeg"
+    ],
+    "descripcion": "Diseños elegantes y personalizados para eventos corporativos y celebraciones especiales."
+    },
+    {
     "slug": "bodas-quince",
     "nombre": "Bodas & Quince",
-    "imagen": "/img/quince.png",
-    "imagen2": "/img/quince.png",
-    "descripcion": "Tortas de bodas..."
-  },
-  {
+    "portada": "img/bodas-quince/portada.png",
+    "imagen": [
+    "/img/bodas-quince/1.jpeg",
+    "/img/bodas-quince/2.jpeg",
+    "/img/bodas-quince/3.jpeg",
+    "/img/bodas-quince/4.jpeg",
+    "/img/bodas-quince/5.jpeg",
+    "/img/bodas-quince/6.jpeg",
+    "/img/bodas-quince/7.jpeg",
+    "/img/bodas-quince/8.jpeg",
+    "/img/bodas-quince/9.jpeg",
+    "/img/bodas-quince/10.jpeg"
+    ],
+    "descripcion": "Tortas de bodas y quince años con detalles sofisticados y adaptados a tu estilo."
+    },
+    {
     "slug": "mini-pasteleria",
     "nombre": "Mini Pastelería",
-    "imagen": "/img/minipasteleria.png",
-    "imagen2": "/img/minipasteleria.png",
-    "descripcion": "Selección de mini postres..."
-  }
-]
-
+    "portada": "/img/mini-pasteleria/portada.png",
+    "imagen": [
+    "/img/mini-pasteleria/1.jpeg",
+    "/img/mini-pasteleria/2.jpeg",
+    "/img/mini-pasteleria/3.jpeg",
+    "/img/mini-pasteleria/4.jpeg",
+    "/img/mini-pasteleria/5.jpeg",
+    "/img/mini-pasteleria/6.jpeg",
+    "/img/mini-pasteleria/7.jpeg",
+    "/img/mini-pasteleria/8.jpeg",
+    "/img/mini-pasteleria/9.jpeg",
+    "/img/mini-pasteleria/10.jpeg",
+    "/img/mini-pasteleria/11.jpeg",
+    "/img/mini-pasteleria/12.jpeg",
+    "/img/mini-pasteleria/13.jpeg",
+    "/img/mini-pasteleria/14.jpeg",
+    "/img/mini-pasteleria/15.jpeg",
+    "/img/mini-pasteleria/16.jpeg",
+    "/img/mini-pasteleria/17.jpeg",
+    "/img/mini-pasteleria/18.jpeg",
+    "/img/mini-pasteleria/19.jpeg",
+    "/img/mini-pasteleria/20.jpeg",
+    "/img/mini-pasteleria/21.jpeg",
+    "/img/mini-pasteleria/22.jpeg",
+    "/img/mini-pasteleria/23.jpeg",
+    "/img/mini-pasteleria/24.jpeg",
+    "/img/mini-pasteleria/25.jpeg",
+    "/img/mini-pasteleria/26.jpeg",
+    "/img/mini-pasteleria/27.jpeg",
+    "/img/mini-pasteleria/28.jpeg",
+    "/img/mini-pasteleria/29.jpeg",
+    "/img/mini-pasteleria/30.jpeg",
+    "/img/mini-pasteleria/31.jpeg",
+    "/img/mini-pasteleria/32.jpeg",
+    "/img/mini-pasteleria/33.jpeg"
+    ],
+    "descripcion": "Selección de mini postres y bocaditos perfectos para mesas dulces y coffee breaks."
+    }
+    ]
