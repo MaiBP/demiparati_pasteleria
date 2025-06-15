@@ -40,58 +40,100 @@
     "nombre": "Bodas & Quince",
     "portada": "img/bodas-quince/portada.png",
     "imagen": [
-    "/img/bodas-quince/1.jpeg",
-    "/img/bodas-quince/2.jpeg",
-    "/img/bodas-quince/3.jpeg",
-    "/img/bodas-quince/4.jpeg",
-    "/img/bodas-quince/5.jpeg",
-    "/img/bodas-quince/6.jpeg",
-    "/img/bodas-quince/7.jpeg",
-    "/img/bodas-quince/8.jpeg",
-    "/img/bodas-quince/9.jpeg",
-    "/img/bodas-quince/10.jpeg"
+    {
+      "url": "/img/bodas-quince/1.jpeg",
+      "description": "Torta de tres niveles en azul y blanco, decorada con rosas de fondant y moño plateado, ideal para fiestas elegantes de quince años."
+    },
+    {
+      "url": "/img/bodas-quince/2.jpeg",
+      "description": "Torta estilo naked con rosas crema y detalles rústicos, acompañada por toppers de madera 'MR & MRS'."
+    },
+    {
+      "url": "/img/bodas-quince/3.jpeg",
+      "description": "Torta de tres niveles totalmente blanca, decorada con rosas naturales y flores blancas en cascada, perfecta para una boda clásica."
+    },
+    {
+      "url": "/img/bodas-quince/4.jpeg",
+      "description": "Torta de boda blanca decorada con hojas doradas y flores en la cima, con base rosada metálica."
+    },
+    {
+      "url": "/img/bodas-quince/5.jpeg",
+      "description": "Torta minimalista decorada con flores secas, follaje silvestre y tonos neutros, ideal para bodas bohemias o campestres."
+    },
+    {
+      "url": "/img/bodas-quince/6.jpeg",
+      "description": "Torta temática con búhos novios y decoración floral, con un diseño tipo tronco tallado en el centro."
+    },
+    {
+      "url": "/img/bodas-quince/7.jpeg",
+      "description": "Torta rústica de dos pisos con flores blancas y topper en forma de corazón que dice 'acá hay amor'."
+    },
+    {
+      "url": "/img/bodas-quince/8.jpeg",
+      "description": "Torta de boda moderna decorada con ramas de eucalipto y flores blancas, con diseño asimétrico y toque artesanal."
+    },
+    {
+      "url": "/img/bodas-quince/9.jpeg",
+      "description": "Torta blanca de dos niveles con efecto de lentejuelas plateadas y topper 'HAPPY BIRTHDAY', ideal para quince años sofisticados."
+    },
+    {
+      "url": "/img/bodas-quince/10.jpeg",
+      "description": "Torta estilo rústico decorada con flores naturales blancas, macarons y perlas comestibles, en un plato dorado."
+    },
+    {
+        "url": "/img/bodas-quince/11.jpeg",
+        "description": "Torta de 15 con tres niveles decorada con esferas de espejo."
+      }
     ],
     "descripcion": "Tortas de bodas y quince años con detalles sofisticados y adaptados a tu estilo."
     },
     {
-    "slug": "mini-pasteleria",
-    "nombre": "Mini Pastelería",
-    "portada": "/img/mini-pasteleria/portada.png",
-    "imagen": [
-    "/img/mini-pasteleria/1.jpeg",
-    "/img/mini-pasteleria/2.jpeg",
-    "/img/mini-pasteleria/3.jpeg",
-    "/img/mini-pasteleria/4.jpeg",
-    "/img/mini-pasteleria/5.jpeg",
-    "/img/mini-pasteleria/6.jpeg",
-    "/img/mini-pasteleria/7.jpeg",
-    "/img/mini-pasteleria/8.jpeg",
-    "/img/mini-pasteleria/9.jpeg",
-    "/img/mini-pasteleria/10.jpeg",
-    "/img/mini-pasteleria/11.jpeg",
-    "/img/mini-pasteleria/12.jpeg",
-    "/img/mini-pasteleria/13.jpeg",
-    "/img/mini-pasteleria/14.jpeg",
-    "/img/mini-pasteleria/15.jpeg",
-    "/img/mini-pasteleria/16.jpeg",
-    "/img/mini-pasteleria/17.jpeg",
-    "/img/mini-pasteleria/18.jpeg",
-    "/img/mini-pasteleria/19.jpeg",
-    "/img/mini-pasteleria/20.jpeg",
-    "/img/mini-pasteleria/21.jpeg",
-    "/img/mini-pasteleria/22.jpeg",
-    "/img/mini-pasteleria/23.jpeg",
-    "/img/mini-pasteleria/24.jpeg",
-    "/img/mini-pasteleria/25.jpeg",
-    "/img/mini-pasteleria/26.jpeg",
-    "/img/mini-pasteleria/27.jpeg",
-    "/img/mini-pasteleria/28.jpeg",
-    "/img/mini-pasteleria/29.jpeg",
-    "/img/mini-pasteleria/30.jpeg",
-    "/img/mini-pasteleria/31.jpeg",
-    "/img/mini-pasteleria/32.jpeg",
-    "/img/mini-pasteleria/33.jpeg"
-    ],
-    "descripcion": "Selección de mini postres y bocaditos perfectos para mesas dulces y coffee breaks."
-    }
+        "slug": "mini-pasteleria",
+        "nombre": "Mini Pastelería",
+        "portada": "/img/mini-pasteleria/portada.png",
+        "imagen": [
+          {
+            "url": "/img/mini-pasteleria/1.jpeg",
+            "description": "Cupcakes y galletas con temática médica, decorados con estetoscopios, pastillas, mascarillas y corazones."
+          },
+          {
+            "url": "/img/mini-pasteleria/2.jpeg",
+            "description": "Cupcakes con decoración estilo videojuego: hachas, cofres y cápsulas de vida sobre césped verde."
+          },
+          {
+            "url": "/img/mini-pasteleria/3.jpeg",
+            "description": "Galletas decoradas con temática de la Bella y la Bestia, con el nombre 'Juana' y detalles como la rosa y vestidos amarillos."
+          },
+          {
+            "url": "/img/mini-pasteleria/4.jpeg",
+            "description": "Galletas con temática marina, decoradas con colas de sirena, estrellas de mar y caracol en tonos pastel."
+          },
+          {
+            "url": "/img/mini-pasteleria/5.jpeg",
+            "description": "Galletas infantiles con temática de granja: animales, flores y detalle en la granja con el nombre 'Noah'."
+          },
+          {
+            "url": "/img/mini-pasteleria/6.jpeg",
+            "description": "Set de galletas en forma de pizza con un chef en el centro y letras que forman la palabra 'PIZZA'."
+          },
+          {
+            "url": "/img/mini-pasteleria/7.jpeg",
+            "description": "Paletas dulces decoradas con personajes de La Bella y la Bestia: la tetera, Lumière y Ding Dong."
+          },
+          {
+            "url": "/img/mini-pasteleria/8.jpeg",
+            "description": "Galletas decoradas con zorros, mapaches, erizos y flechas en tonos pastel, ideales para primer cumpleaños."
+          },
+          {
+            "url": "/img/mini-pasteleria/9.jpeg",
+            "description": "Cupcakes y galletas temáticas de 15 años en azul y blanco, con flores, perlas y letra 'S'."
+          },
+          {
+            "url": "/img/mini-pasteleria/10.jpeg",
+            "description": "Galletas personalizadas con el nombre 'Dante' y temática de Paw Patrol, con huellitas y escudos."
+          }
+        ],
+        "descripcion": "Selección de mini postres y bocaditos perfectos para mesas dulces y coffee breaks."
+      }
+      
     ]
