@@ -18,7 +18,7 @@ export default function ProductsFullscreen() {
 
   return (
     <section className="w-screen h-screen grid grid-cols-2 grid-rows-2">
-      {(categorias as Categoria[]).map((cat) => {
+      {(categorias as unknown as Categoria[]).map((cat) => {
         const isActive = !!active[cat.slug];
 
         return (
