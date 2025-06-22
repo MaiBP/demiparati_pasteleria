@@ -4,37 +4,258 @@
     "nombre": "Infantiles",
     "portada": "/img/infantiles/portada.png",
     "imagen": [
-    "/img/infantiles/1.jpeg",
-    "/img/infantiles/2.jpeg",
-    "/img/infantiles/3.jpeg",
-    "/img/infantiles/4.jpeg",
-    "/img/infantiles/5.jpeg",
-    "/img/infantiles/6.jpeg",
-    "/img/infantiles/7.jpeg",
-    "/img/infantiles/8.jpeg",
-    "/img/infantiles/9.jpeg",
-    "/img/infantiles/10.jpeg"
+        {
+            "url": "/img/infantiles/1.jpeg",
+            "description": "Torta con diseño de monstruo color naranja y gorrito verde, acompañada de un cupcake con el número 2, ideal para cumpleaños divertidos."
+          },
+          {
+            "url": "/img/infantiles/2.jpeg",
+            "description": "Torta rosa decorada con flores blancas, topper de arcoíris y los personajes de Bluey, personalizada con el nombre 'Alfon' y el número 2."
+          },
+          {
+            "url": "/img/infantiles/3.jpeg",
+            "description": "Torta inspirada en princesas Disney con colores pastel y topper con castillo y princesas, personalizada con el nombre 'Lucía' y el número 4."
+          },
+          {
+            "url": "/img/infantiles/4.jpeg",
+            "description": "Torta blanca decorada con lunares rojos y topper de Minnie Mouse, perfecta para cumpleaños temáticos con estilo clásico."
+          },
+          {
+            "url": "/img/infantiles/5.jpeg",
+            "description": "Torta lila decorada con margaritas y topper de la serie infantil 'Chiquititas', personalizada con el nombre 'Martu'."
+          },
+          {
+            "url": "/img/infantiles/6.jpeg",
+            "description": "Torta celeste con personajes de Stitch y Angel abrazados, decorada con corazones y perlitas, personalizada con el nombre 'Juana' y el número 8."
+          },
+          {
+            "url": "/img/infantiles/7.jpeg",
+            "description": "Torta blanca decorada con nubes y topper del personaje Skye de Paw Patrol, personalizada con el nombre 'Juana' y el número 3."
+          },
+          {
+            "url": "/img/infantiles/8.jpeg",
+            "description": "Torta blanca con gran variedad de granas de colores, decorada con Peppa Pig disfrazada de hada y el número 5."
+          },
+          {
+            "url": "/img/infantiles/9.jpeg",
+            "description": "Torta azul con diseño de ballena sonriente y cuerno de unicornio, decorada con crema de colores y detalles marinos."
+          },
+          {
+            "url": "/img/infantiles/10.jpeg",
+            "description": "Torta temática de granja con animales en papel, decoraciones de madera y vegetación, personalizada con el nombre 'Emi' y el número 2."
+          },
+          {
+            "url": "/img/infantiles/11.jpeg",
+            "description": "Torta de cumpleaños temática de Barbie con decoración en tonos rosados, perlitas comestibles, topper de Barbie y el nombre 'Juana 7'."
+          },
+          {
+            "url": "/img/infantiles/12.jpeg",
+            "description": "Torta infantil temática de dinosaurios con figuras coloridas, volcán al fondo y nombre 'Renata' con el número 8 al frente."
+          },
+          {
+            "url": "/img/infantiles/13.jpeg",
+            "description": "Torta granja en tonos pastel con molino, valla blanca y animalitos en 3D, personalizada con el nombre 'Juana' y el número 2."
+          },
+          {
+            "url": "/img/infantiles/14.jpeg",
+            "description": "Torta de superhéroes con los personajes de Spidey and His Amazing Friends, fondo azul y ciudad iluminada, con el nombre 'Pepi' y el número 3."
+          },
+          {
+            "url": "/img/infantiles/15.jpeg",
+            "description": "Torta decorada con personajes de la serie 'Numberblocks', letras de colores y gran cantidad de granas multicolores en la base. Nombre 'Merlin'."
+          },
+          {
+            "url": "/img/infantiles/16.jpeg",
+            "description": "Torta de princesa con castillo rosa y figura de la Bella Durmiente. Decorada con mariposas y flores, personalizada con el nombre 'Antonella' y el número 3."
+          },
+          {
+            "url": "/img/infantiles/17.jpeg",
+            "description": "Torta de dos pisos inspirada en La Bella y la Bestia con vitrales comestibles de rosas y marco dorado, personalizada con el nombre 'Alfon'."
+          },
+          {
+            "url": "/img/infantiles/18.jpeg",
+            "description": "Torta de la película Cars decorada con personajes como Rayo McQueen y Mate, cactus, señales de tránsito, y el nombre 'Lucio' con el número 4."
+          },
+          {
+            "url": "/img/infantiles/19.jpeg",
+            "description": "Torta Frozen decorada con Elsa y Anna, copos de nieve, perlas comestibles y el número 3. Diseño en tonos azules y blancos con efecto drip."
+          },
+          {
+            "url": "/img/infantiles/20.jpeg",
+            "description": "Torta en forma de ciervito con orejas, cuernos y flores. Decoración en fondant en tonos suaves, ideal para cumpleaños tiernos y temáticos."
+          },
+          {
+            "url": "/img/infantiles/21.jpeg",
+            "description": "Torta inspirada en Encanto, con una puerta color turquesa y detalles florales en tonos fucsia, ideal para cumpleaños mágicos."
+          },
+          {
+            "url": "/img/infantiles/22.jpeg",
+            "description": "Torta temática con perrito estilo caricatura comiendo sandía, en tonos lilas y celestes, decorada con huellitas y banderines. Nombre 'Cati'."
+          },
+          {
+            "url": "/img/infantiles/23.jpeg",
+            "description": "Torta de bombero para un cumpleaños de 3 años, con decoraciones de fuego, camión rojo, y figura de niño bombero."
+          },
+          {
+            "url": "/img/infantiles/24.jpeg",
+            "description": "Torta de Mickey Mouse de dos pisos con su icónica ropa, orejas negras y símbolos del personaje en la base."
+          },
+          {
+            "url": "/img/infantiles/25.jpeg",
+            "description": "Torta temática de Violetta con teclas de piano, estrellas, auriculares y nombre personalizado, en tonos lilas y fucsias."
+          },
+          {
+            "url": "/img/infantiles/26.jpeg",
+            "description": "Tortas individuales de Minnie y Daisy para Renata y Emma, decoradas con estrellas, lunares y figuras en fondant."
+          },
+          {
+            "url": "/img/infantiles/27.jpeg",
+            "description": "Torta de Sonic con su cara en relieve, orejas y pinchos en 3D, montada sobre base azul con glitter brillante."
+          },
+          {
+            "url": "/img/infantiles/28.jpeg",
+            "description": "Torta de granja de dos pisos con animales y tractor, decorada con galletitas temáticas de vaca, cerdito y más. Nombre 'Noah'."
+          },
+          {
+            "url": "/img/infantiles/29.jpeg",
+            "description": "Torta de unicornio con alas de colores, flores en buttercream y detalles en dorado brillante, ideal para cumpleaños mágicos."
+          },
+          {
+            "url": "/img/infantiles/30.jpeg",
+            "description": "Torta de monstruo simpático con lengua arcoíris, ojos saltones y nombre 'Alex'. Perfecta para un cumpleaños divertido."
+          }
+          
     ],
     "descripcion": "Tortas y cupcakes temáticos para cumpleaños infantiles, con personajes y colores divertidos."
     },
     {
-    "slug": "eventos-especiales",
-    "nombre": "Eventos Especiales",
-    "portada": "img/eventos-especiales/portada.png",
-    "imagen": [
-    "/img/eventos-especiales/1.jpeg",
-    "/img/eventos-especiales/2.jpeg",
-    "/img/eventos-especiales/3.jpeg",
-    "/img/eventos-especiales/4.jpeg",
-    "/img/eventos-especiales/5.jpeg",
-    "/img/eventos-especiales/6.jpeg",
-    "/img/eventos-especiales/7.jpeg",
-    "/img/eventos-especiales/8.jpeg",
-    "/img/eventos-especiales/9.jpeg",
-    "/img/eventos-especiales/10.jpeg"
-    ],
-    "descripcion": "Diseños elegantes y personalizados para eventos corporativos y celebraciones especiales."
+  "slug": "eventos-especiales",
+  "nombre": "Eventos Especiales",
+  "portada": "img/eventos-especiales/portada.png",
+  "imagen": [ 
+    {
+      "url": "/img/eventos-especiales/1.jpeg",
+      "description": "Torta minimalista decorada con flores grabadas en glasé blanco y el número 21, ideal para cumpleaños elegantes."
     },
+    {
+      "url": "/img/eventos-especiales/2.jpeg",
+      "description": "Torta decorada con flores coloridas en relieve, perfecta para celebraciones primaverales o cumpleaños al aire libre."
+    },
+    {
+      "url": "/img/eventos-especiales/3.jpeg",
+      "description": "Torta de confirmación decorada con rosas violetas, hojas verdes y topper en dorado que dice 'Mi Confirmación'."
+    },
+    {
+      "url": "/img/eventos-especiales/4.jpeg",
+      "description": "Torta negra con textura de neumático, decorada con herramientas comestibles y topper que dice 'Pablo 60'."
+    },
+    {
+      "url": "/img/eventos-especiales/5.jpeg",
+      "description": "Torta temática de azafata con figura en papel y un avión en el fondo, perfecta para despedidas o celebraciones de vuelo."
+    },
+    {
+      "url": "/img/eventos-especiales/6.jpeg",
+      "description": "Torta para baby shower decorada con ilustraciones infantiles de autos, trenes y topper que dice 'Giovi Baby Shower'."
+    },
+    {
+      "url": "/img/eventos-especiales/7.jpeg",
+      "description": "Torta de comunión o bautismo con macarons y flores en tonos celeste y blanco, adornada con una cruz gris."
+    },
+    {
+      "url": "/img/eventos-especiales/8.jpeg",
+      "description": "Torta de graduación con birrete negro y decoración en dorado, blanco y negro, ideal para celebrar logros académicos."
+    },
+    {
+      "url": "/img/eventos-especiales/9.jpeg",
+      "description": "Torta temática de Garfield con cobertura de chocolate, malvaviscos y figura de Garfield comiéndose un trozo del pastel."
+    },
+    {
+      "url": "/img/eventos-especiales/10.jpeg",
+      "description": "Torta en forma de balde de cerveza 'Corona', con hielos simulados y una lata real encima, personalizada con el nombre 'Juanpi'."
+    },
+    {
+        "url": "/img/eventos-especiales/11.jpeg",
+        "description": "Torta temática de bombero, decorada con botas, casco, hacha y chaqueta de uniforme sobre una pared de ladrillos comestibles."
+      },
+      {
+        "url": "/img/eventos-especiales/12.jpeg",
+        "description": "Torta en forma de barril de cerveza con espuma y una lata de Heineken en el aire, personalizada con el nombre Fernando y el número 50."
+      },
+      {
+        "url": "/img/eventos-especiales/13.jpeg",
+        "description": "Torta médica blanca con detalles en dorado y negro, decorada con estetoscopio y símbolo de la medicina."
+      },
+      {
+        "url": "/img/eventos-especiales/14.jpeg",
+        "description": "Torta divertida decorada con franjas celestes y blancas y la frase '¿Qué mirá, bobo? ¡Andá pa’ allá!' inspirada en Lionel Messi."
+      },
+      {
+        "url": "/img/eventos-especiales/15.jpeg",
+        "description": "Torta navideña con decoración elegante en blanco, dorado y plateado, coronada con esferas navideñas y perlas comestibles."
+      },
+      {
+        "url": "/img/eventos-especiales/16.jpeg",
+        "description": "Torta rústica con mezcla de chocolates y galletas, coronada con una figura de manos en oración y mensaje personalizado para Nahue."
+      },
+      {
+        "url": "/img/eventos-especiales/17.jpeg",
+        "description": "Torta de chocolate con cobertura goteada y decoración abundante de golosinas, Oreos, Kinder y mini Nutella."
+      },
+      {
+        "url": "/img/eventos-especiales/18.jpeg",
+        "description": "Torta de comunión con decoración blanca, flores naturales, cruz dorada y figura de niño arrodillado con el nombre Theo."
+      },
+      {
+        "url": "/img/eventos-especiales/19.jpeg",
+        "description": "Torta con acabado rústico en tonos naturales, adornada con flores blancas, macarons y topper de comunión personalizado para Timoteo."
+      },
+      {
+        "url": "/img/eventos-especiales/20.jpeg",
+        "description": "Torta colorida con temática de cumpleaños, decorada con bicicleta, corazones de colores y una foto personalizada de Mery."
+      },
+      {
+        "url": "/img/eventos-especiales/21.jpeg",
+        "description": "Torta de comunión decorada con margaritas naturales y cruz de chocolate blanco con relieve dorado, ideal para celebraciones religiosas."
+      },
+      {
+        "url": "/img/eventos-especiales/22.jpeg",
+        "description": "Torta negra elegante con número 60 en dorado y decoración de bombones Ferrero Rocher y hojas de caramelo, perfecta para cumpleaños sofisticados."
+      },
+      {
+        "url": "/img/eventos-especiales/23.jpeg",
+        "description": "Torta de flamenca con volados en rojo y negro, figura de bailaora pintada a mano y número 80 en la cima, ideal para celebraciones con temática española."
+      },
+      {
+        "url": "/img/eventos-especiales/24.jpeg",
+        "description": "Torta con copa inclinada y racimo de uvas en fondant, decorada con chocolate derretido y mensaje 'Felices 36', perfecta para amantes del vino."
+      },
+      {
+        "url": "/img/eventos-especiales/25.jpeg",
+        "description": "Torta temática de Star Wars en negro estrellado, decorada con personaje de Han Solo y tipografía amarilla clásica de la saga."
+      },
+      {
+        "url": "/img/eventos-especiales/26.jpeg",
+        "description": "Torta McDonald's personalizada con logo, hamburguesa, papas fritas, bebida y número 31 en dorado, ideal para fans del Happy Meal."
+      },
+      {
+        "url": "/img/eventos-especiales/27.jpeg",
+        "description": "Torta roja decorada con chocolates variados, perlitas blancas y detalles en crema, perfecta para celebraciones navideñas o románticas."
+      },
+      {
+        "url": "/img/eventos-especiales/28.jpeg",
+        "description": "Torta deportiva temática de tenis, decorada con pelotas verdes, goteado de glaseado y topper con mensaje personalizado para Guille."
+      },
+      {
+        "url": "/img/eventos-especiales/29.jpeg",
+        "description": "Torta blanca con efecto mármol, macarons rosados y flores delicadas, coronada con topper dorado de cumpleaños número 80 para Juanita."
+      },
+      {
+        "url": "/img/eventos-especiales/30.jpeg",
+        "description": "Torta de graduación blanca con detalles en negro y rojo, decorada con logo EMBV, moño y topper personalizado con el nombre Bernarda."
+      }
+  ],
+  "descripcion": "Diseños elegantes y personalizados para eventos corporativos y celebraciones especiales."
+},
     {
     "slug": "bodas-quince",
     "nombre": "Bodas & Quince",
