@@ -126,7 +126,7 @@
           }
           
     ],
-    "descripcion": "Tortas y cupcakes temáticos para cumpleaños infantiles, con personajes y colores divertidos."
+    "descripcion": "Tortas temáticas para cumpleaños infantiles, con personajes y colores divertidos."
     },
     {
   "slug": "eventos-especiales",
@@ -355,6 +355,5 @@
           }
         ],
         "descripcion": "Selección de mini postres y bocaditos perfectos para mesas dulces y coffee breaks."
-      }
-      
+      }  
     ]
