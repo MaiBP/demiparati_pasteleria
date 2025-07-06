@@ -47,7 +47,7 @@ export default function AnimatedText() {
           animation: mainBlock 2s cubic-bezier(.74,.06,.4,.92) forwards;
         }
         .title h1 {
-          font-size: 64px;
+          font-size: 50px;
           color: #000;
           opacity: 0;
           animation: mainFadeIn 2s forwards;
@@ -84,7 +84,7 @@ export default function AnimatedText() {
           animation-delay: 2s;
         }
         .role p {
-          font-size: 48px;
+          font-size: 35px;
           color: #000;
           opacity: 0;
           animation: secFadeIn 2s forwards;

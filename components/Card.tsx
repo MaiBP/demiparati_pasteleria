@@ -4,6 +4,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useCallback } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 import { FiShare2 } from "react-icons/fi";
 
 export type CardProps = {
@@ -21,37 +22,45 @@ export default function Card({
   index,
   description = "",
 }: CardProps) {
-  const handleShare = useCallback(
-    (e: React.MouseEvent) => {
-      // Evita que el click en el botón dispare la navegación del Link
+  const BUSINESS_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
+  const handleGenericShare = useCallback(
+    async (e: React.MouseEvent) => {
       e.stopPropagation();
       e.preventDefault();
-
+      const fullUrl = window.location.origin + imgSrc;
       const shareData = {
-        title: `${title} ${index + 1}`,
+        title: `${title} #${index + 1}`,
         text: description || title,
-        url: window.location.origin + imgSrc,
+        url: fullUrl,
       };
-
       if (navigator.share) {
-        navigator
-          .share(shareData)
-          .catch((err) => console.error("Error compartiendo:", err));
+        try {
+          await navigator.share(shareData);
+        } catch {}
       } else if (navigator.clipboard) {
-        navigator.clipboard
-          .writeText(shareData.url)
-          .then(() => alert("Enlace copiado al portapapeles"))
-          .catch((err) =>
-            console.error("Error copiando al portapapeles:", err)
-          );
+        await navigator.clipboard.writeText(fullUrl);
+        alert("Enlace copiado al portapapeles");
       } else {
-        alert(
-          "Tu navegador no soporta la API de compartir. Copia manualmente este enlace:\n" +
-            shareData.url
-        );
+        alert(`Copia este enlace:\n${fullUrl}`);
       }
     },
     [imgSrc, title, index, description]
+  );
+
+  const handleWhatsapp = useCallback(
+    (e: React.MouseEvent) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (!BUSINESS_NUMBER) return;
+      const fullUrl = window.location.origin + imgSrc;
+      const text = `¡Mira este diseño de ${title} #${index + 1}!`;
+      const waLink = `https://wa.me/${BUSINESS_NUMBER}?text=${encodeURIComponent(
+        text + " " + fullUrl
+      )}`;
+      window.open(waLink, "_blank");
+    },
+    [imgSrc, title, index, BUSINESS_NUMBER]
   );
 
   return (
@@ -59,38 +68,54 @@ export default function Card({
       href={`/productos/${slug}`}
       className="
         group block max-w-sm mx-auto
-        bg-white ring-2 ring-white rounded-xl
-        overflow-hidden shadow-lg transition
-        duration-200 hover:shadow-2xl hover:scale-[1.03]
+        bg-white rounded-xl overflow-hidden shadow-lg
+        hover:shadow-2xl transition-shadow duration-200
       "
     >
-      {/* Contenedor cuadrado 1:1 */}
       <div className="relative w-full pt-[100%] overflow-hidden">
         <Image
           src={imgSrc}
           alt={`${title} imagen ${index + 1}`}
           fill
-          className="absolute inset-0 object-cover object-center transition-transform duration-300 group-hover:scale-105"
+          className="absolute inset-0 object-cover object-center"
         />
 
-        {/* Botón de compartir */}
+        {/* Compartir: abajo izquierda */}
         <button
-          onClick={handleShare}
+          onClick={handleGenericShare}
           className="
-            absolute top-2 right-2
-            bg-white/75 p-1 rounded-full
-            hover:bg-white transition
+            absolute bottom-3 left-3
+            bg-white/50 backdrop-blur-sm
+            p-2 rounded-full
+            hover:bg-white/60 transition
           "
-          aria-label="Compartir imagen"
+          aria-label="Compartir"
         >
-          <FiShare2 className="text-gray-800" size={20} />
+          <FiShare2 className="text-gray-800 text-base" />
+        </button>
+
+        {/* Quiero: abajo derecha, más pequeño */}
+        <button
+          onClick={handleWhatsapp}
+          className="
+            absolute bottom-3 right-3
+            flex items-center gap-1
+            bg-white/50 backdrop-blur-sm
+            px-2 py-1 rounded-full text-sm
+            hover:bg-white/60 transition
+          "
+          aria-label="Quiero"
+        >
+          <FaWhatsapp className="text-green-600 text-base" />
+          <span className="font-medium text-pink-600">
+            ¡Quiero!
+          </span>
         </button>
       </div>
 
-      {/* Título + descripción */}
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-800">
-          {title} {index + 1}
+          {title} #{index + 1}
         </h3>
         {description && (
           <p className="mt-2 text-sm text-gray-600 italic">
@@ -101,4 +126,9 @@ export default function Card({
     </Link>
   );
 }
+
+
+
+
+
 

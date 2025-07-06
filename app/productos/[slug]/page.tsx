@@ -1,4 +1,3 @@
-// app/productos/[slug]/page.tsx
 "use client";
 
 import { notFound } from "next/navigation";
@@ -35,11 +34,6 @@ export interface CategoryImage {
   
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {cat.imagen.map((imgObj, i) => {
-            // Si tu JSON estuviese mixto (strings y objetos), harías:
-            // const { url, description = "" } = typeof imgObj === "string"
-            //   ? { url: imgObj, description: "" }
-            //   : imgObj;
-  
             const { url, description = "" } = imgObj as CategoryImage;
             return (
               <Card
