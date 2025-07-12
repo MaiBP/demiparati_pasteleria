@@ -1,15 +1,33 @@
 // components/HeroSection.tsx
 "use client";
 
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import AnimatedText from "@/components/AnimatedText";
 
-import imgTall from "@/public/img/hero/portada-1111.png";       // Grande izquierda
-import imgTopRight1 from "@/public/img/hero/portada-1.png"; // Pequeña arriba-derecha
-import imgBottomRight from "@/public/img/hero/portada-3.png"; // Mediana abajo-derecha
-import imgBottomLeft from "@/public/img/hero/hero2.png"; // Mediana abajo-derecha
+import imgTall       from "@/public/img/hero/portada-1111.png"; // Grande izquierda
+import imgTopRight1  from "@/public/img/hero/portada-1.png";    // Pequeña arriba-derecha
+import imgBottomRight from "@/public/img/hero/portada-3.png";   // Mediana abajo-derecha
+import imgBottomLeft  from "@/public/img/hero/hero2.png";       // Mediana abajo-izquierda
+
+// Variantes para animar cada card
+const cardVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { delay: 0.8 * i, duration: 0.8, ease: "easeOut" },
+  }),
+};
 
 export default function HeroSection() {
+  const images = [
+    { src: imgTall,        alt: "Principal",          cols: "col-span-1 row-span-1" },
+    { src: imgTopRight1,   alt: "Arriba derecha",     cols: "col-start-2 col-span-2 row-start-1" },
+    { src: imgBottomRight, alt: "Abajo derecha",      cols: "col-span-2 row-start-2" },
+    { src: imgBottomLeft,  alt: "Abajo izquierda",    cols: "col-span-2 row-start-2" },
+  ];
+
   return (
     <section className="bg-[#FFF6EA] py-12">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -20,46 +38,27 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* ===== Mosaic 2×2 con 3 imágenes ===== */}
+        {/* ===== Mosaic 2×2 con animación ===== */}
         <div className="px-6">
           <div className="grid grid-cols-3 grid-rows-2 gap-4 h-[70vh]">
-            {/* Grande (col-span-1, row-span-2) */}
-            <div className="relative row-span-1 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={imgTall}
-                alt="Imagen principal"
-                fill
-                className="object-cover object-center transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-
-            {/* Pequeña arriba-derecha (col 2, row 1) */}
-            <div className="relative col-start-2 col-span-3 row-start-1 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={imgTopRight1}
-                alt="Detalle arriba derecha"
-                fill
-                className="object-cover object-center transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-
-            {/* Mediana abajo (col-span-2, row 2) */}
-            <div className="relative col-span-2 row-start-2 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={imgBottomRight}
-                alt="Detalle abajo derecha"
-                fill
-                className="object-cover object-center transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <div className="relative col-span-2 row-start-2 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={imgBottomLeft}
-                alt="Detalle abajo derecha"
-                fill
-                className="object-cover object-center transition-transform duration-300 hover:scale-105"
-              />
-            </div>
+            {images.map((img, idx) => (
+              <motion.div
+                key={idx}
+                custom={idx}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={cardVariants}
+                className={`relative rounded-lg overflow-hidden shadow-lg ${img.cols}`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover object-center transition-transform duration-300 hover:scale-105"
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
