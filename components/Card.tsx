@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useCallback } from "react";
-import { FaWhatsapp } from "react-icons/fa";
 import { FiShare2 } from "react-icons/fi";
 import { motion, Variants } from "framer-motion";
 
@@ -20,7 +19,7 @@ const cardVariants: Variants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" },
+    transition: { delay: i * 0.1, duration: 0.3, ease: "easeOut" },
   }),
   hover: {
     scale: 1.03,
@@ -35,7 +34,7 @@ export default function Card({
   index,
   description = "",
 }: CardProps) {
-  const BUSINESS_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
 
   const handleShare = useCallback(
     (e: React.MouseEvent) => {
@@ -50,23 +49,6 @@ export default function Card({
       }
     },
     [imgSrc, title, description]
-  );
-
-  const handleWhatsapp = useCallback(
-    (e: React.MouseEvent) => {
-      e.stopPropagation();
-      e.preventDefault();
-      if (!BUSINESS_NUMBER) return;
-      const fullUrl = window.location.origin + imgSrc;
-      const text = `¡Mira este diseño de ${title} #${index + 1}!`;
-      window.open(
-        `https://wa.me/${BUSINESS_NUMBER}?text=${encodeURIComponent(
-          text + " " + fullUrl
-        )}`,
-        "_blank"
-      );
-    },
-    [imgSrc, title, index, BUSINESS_NUMBER]
   );
 
   return (
@@ -95,7 +77,7 @@ export default function Card({
           <button
             onClick={handleShare}
             className="
-              absolute bottom-2 left-2
+              absolute bottom-2 right-2
               bg-white/50 backdrop-blur-sm
               p-2 rounded-full
               hover:bg-white/60 transition
@@ -103,22 +85,6 @@ export default function Card({
             aria-label="Compartir"
           >
             <FiShare2 className="text-gray-800 text-base" />
-          </button>
-
-          {/* Quiero */}
-          <button
-            onClick={handleWhatsapp}
-            className="
-              absolute bottom-2 right-2
-              flex items-center gap-1
-              bg-white/50 backdrop-blur-sm
-              px-2 py-1 rounded-full text-sm
-              hover:bg-white/60 transition
-            "
-            aria-label="Quiero"
-          >
-            <FaWhatsapp className="text-green-600 text-base" />
-            <span className="font-medium text-pink-600">Quiero</span>
           </button>
         </div>
         <div className="p-4 flex-grow flex flex-col justify-between">

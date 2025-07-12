@@ -23,7 +23,7 @@ const cardVariants: Variants = {
 export default function HeroSection() {
   const images = [
     { src: imgTall,        alt: "Principal",          cols: "col-span-1 row-span-1" },
-    { src: imgTopRight1,   alt: "Arriba derecha",     cols: "col-start-2 col-span-2 row-start-1" },
+    { src: imgTopRight1,   alt: "Arriba derecha",     cols: "col-start-2 col-span-3 row-start-1" },
     { src: imgBottomRight, alt: "Abajo derecha",      cols: "col-span-2 row-start-2" },
     { src: imgBottomLeft,  alt: "Abajo izquierda",    cols: "col-span-2 row-start-2" },
   ];
