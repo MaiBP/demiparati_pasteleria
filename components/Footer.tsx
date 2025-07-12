@@ -49,7 +49,7 @@ export default function Footer() {
               Sobre mí
             </Link>
             <Link
-              href="#productos"
+              href="/productos"
               className="hover:text-pink-600 transition-colors"
             >
               Productos
