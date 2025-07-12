@@ -117,7 +117,7 @@ export default function FeaturesSection() {
               <Link
                 key={cat.slug}
                 href={`/productos/${cat.slug}`}
-                className="inline-block bg-[#5C4033] hover:bg-[#ffb510] hover:text-[#5C4033] text-white px-4 py-2 rounded-full transition"
+                className="inline-block bg-[#5C4033] hover:bg-[#ffb510] hover:text-[#5C4033] text-white px-2 py-2 rounded-full transition"
               >
                 {cat.label}
               </Link>

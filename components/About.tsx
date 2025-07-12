@@ -17,15 +17,13 @@ export default function About() {
     visible: { transition: { staggerChildren: 0.2 } },
   };
 
- 
   const item: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* Background PNG */}
+    <section className="relative w-full overflow-hidden min-h-screen flex items-center py-20">
       <Image
         src={aboutBG}
         alt="Fondo decorativo"
@@ -33,27 +31,25 @@ export default function About() {
         className="absolute inset-0 object-cover object-center -z-10"
       />
 
-      <div className="relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-15 py-20 px-6 md:px-8 items-center">
-        
+      <motion.div className="relative z-10 mx-4 md:mx-auto max-w-md md:max-w-7xl bg-white/50 backdrop-blur-md rounded-2xl p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         <motion.div
-          className="bg-white/50 backdrop-blur-md p-8 rounded-lg"
           variants={container}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <motion.span
             className="text-pink-500 font-medium uppercase"
             variants={item}
           >
-            Sobre mi 🎂
+            Sobre mí 🎂
           </motion.span>
 
           <motion.h2
             className="mt-2 text-3xl md:text-4xl font-bold text-gray-800"
             variants={item}
           >
-            Buenas! Soy Estefania
+            ¡Hola! Soy Estefania
           </motion.h2>
 
           <motion.p
@@ -75,15 +71,20 @@ export default function About() {
             deliciosos.
           </motion.p>
         </motion.div>
-        <div className="flex justify-center">
+
+        {/* Slider animado */}
+        <motion.div
+          className="flex justify-center items-center"
+          variants={item}
+        >
           <ImageSlider
             images={slides}
             width={600}
             height={500}
             autoplayInterval={5000}
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

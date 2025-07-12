@@ -33,27 +33,17 @@ export default function CategoriaPage({
   return (
     <main className="py-16 px-4 bg-[#FFF6EA]">
       {/* === CHIPS PARA OTRAS CATEGORÍAS === */}
-      <div
-        className="
-          max-w-6xl mx-auto
-          flex flex-nowrap overflow-x-auto
-          sm:flex-wrap sm:justify-center
-          gap-2 sm:gap-3 mb-5
-          scrollbar-thin scrollbar-thumb-gray-300
-        "
-      >
+      <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-3 mb-5">
         {otherCats.map((c) => (
           <Link
             key={c.slug}
             href={`/productos/${c.slug}`}
             className="
-              flex-shrink-0
-              px-1 py-1
+              px-4 py-1
               bg-white border border-[#5C4033]
               text-[#5C4033]
               rounded-full
-              text-xs sm:text-sm
-              font-medium
+              text-sm font-medium
               hover:bg-[#ffb510] hover:text-[#5C4033]
               transition
             "

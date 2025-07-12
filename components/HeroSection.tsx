@@ -29,7 +29,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="bg-[#FFF6EA] py-12">
+    <section className="bg-[#FFF6EA] py-12 min-h-screen ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* ===== Texto Animado ===== */}
         <div className="flex items-center justify-center px-6">
