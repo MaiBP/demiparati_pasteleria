@@ -35,6 +35,7 @@ export default function FloatingWhatsApp() {
           src={cookie}
           alt="WhatsApp"
           fill
+          sizes="56px"
           className="object-cover"
         />
       </div>

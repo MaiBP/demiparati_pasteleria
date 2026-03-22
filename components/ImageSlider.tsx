@@ -25,7 +25,7 @@ export default function ImageSlider({
   autoplayInterval = 3000,
 }: ImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const previous = () =>
     setCurrentIndex((i) => (i > 0 ? i - 1 : images.length - 1));
@@ -40,7 +40,12 @@ export default function ImageSlider({
     intervalRef.current = setInterval(() => {
       setCurrentIndex((i) => (i < images.length - 1 ? i + 1 : 0));
     }, autoplayInterval);
-    return () => clearInterval(intervalRef.current);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, [images, autoplayInterval]);
 
   return (
@@ -51,7 +56,11 @@ export default function ImageSlider({
         overflow-hidden rounded-md 
         p-2 sm:p-4
       "
-      onMouseEnter={() => clearInterval(intervalRef.current!)}
+      onMouseEnter={() => {
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+        }
+      }}
       onMouseLeave={() => {
         intervalRef.current = setInterval(() => {
           setCurrentIndex((i) => (i < images.length - 1 ? i + 1 : 0));
@@ -95,6 +104,7 @@ export default function ImageSlider({
               src={src}
               alt={`Slide ${idx + 1}`}
               fill
+              sizes="(max-width: 768px) 100vw, 600px"
               className="object-cover rounded-md"
             />
           </motion.div>

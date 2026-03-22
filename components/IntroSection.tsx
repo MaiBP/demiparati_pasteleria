@@ -86,6 +86,7 @@ export default function FeaturesSection() {
                 src={item.img}
                 alt={item.title}
                 fill
+                sizes="150px"
                 className="object-cover rounded-md"
               />
             </div>
@@ -130,6 +131,7 @@ export default function FeaturesSection() {
               src={cupcakesImg }
               alt="Cupcakes decorados"
               fill
+              sizes="300px"
               className="object-cover rounded-md"
             />
           </div>

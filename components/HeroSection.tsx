@@ -55,6 +55,9 @@ export default function HeroSection() {
                   src={img.src}
                   alt={img.alt}
                   fill
+                  loading={idx < 2 ? "eager" : "lazy"}
+                  fetchPriority={idx < 2 ? "high" : undefined}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-center transition-transform duration-300 hover:scale-105"
                 />
               </motion.div>

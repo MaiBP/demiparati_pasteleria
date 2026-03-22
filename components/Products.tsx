@@ -1,9 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import categorias from "@/app/data/categories.json";
+import { normalizeImagePath } from "@/lib/seo";
 
 type Categoria = {
   slug: string;
@@ -36,10 +37,13 @@ export default function ProductsFullscreen() {
           >
             {/* Imagen de fondo */}
             <div className="absolute inset-0">
-              <img
-                src={cat.portada}
+              <Image
+                src={normalizeImagePath(cat.portada)}
                 alt={cat.nombre}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority={cat.slug === "infantiles" || cat.slug === "eventos-especiales"}
+                className="object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
 

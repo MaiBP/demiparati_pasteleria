@@ -70,6 +70,7 @@ export default function Card({
             src={imgSrc}
             alt={`${title} imagen ${index + 1}`}
             fill
+            sizes="(max-width: 640px) 100vw, 296px"
             className="object-cover object-center"
           />
 

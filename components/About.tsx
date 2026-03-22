@@ -28,6 +28,7 @@ export default function About() {
         src={aboutBG}
         alt="Fondo decorativo"
         fill
+        sizes="100vw"
         className="absolute inset-0 object-cover object-center -z-10"
       />
 

@@ -130,7 +130,7 @@
     {
   "slug": "eventos-especiales",
   "nombre": "Eventos Especiales",
-  "portada": "img/eventos-especiales/portada.png",
+  "portada": "/img/eventos-especiales/portada.png",
   "imagen": [ 
     {
       "url": "/img/eventos-especiales/1.jpeg",
@@ -258,7 +258,7 @@
     {
     "slug": "bodas-quince",
     "nombre": "Bodas & Quince",
-    "portada": "img/bodas-quince/portada.png",
+    "portada": "/img/bodas-quince/portada.png",
     "imagen": [
     {
       "url": "/img/bodas-quince/1.jpeg",

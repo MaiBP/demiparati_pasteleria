@@ -1,26 +1,32 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import HamburgerToggle from "@/components/HamburguerToggle";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import HamburgerToggle from "@/components/HamburguerToggle";
 import Logo from "@/public/img/logo.png";
+
+const navItems = [
+  { href: "/", label: "Inicio" },
+  { href: "/sobremi", label: "Sobre mi" },
+  { href: "/productos", label: "Productos" },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detectar scroll
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -28,73 +34,59 @@ export default function Navbar() {
   return (
     <header
       className={[
-        "w-full py-3 px-5 flex items-center justify-between transition-all duration-300",
-        "sticky top-0 z-50",
+        "sticky top-0 z-50 flex w-full items-center justify-between px-5 py-3 transition-all duration-300",
         isScrolled
-          ? "backdrop-blur-md bg-[#FFF6EA]/80 shadow-md"
-          : "bg-[#FFF6EA]"
+          ? "bg-[#FFF6EA]/80 shadow-md backdrop-blur-md"
+          : "bg-[#FFF6EA]",
       ].join(" ")}
     >
-      {/* Móvil: Hamburger */}
       <div className="md:hidden">
         <HamburgerToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
 
-      {/* Logo */}
-      <div className="flex-1 flex justify-center md:justify-start">
+      <div className="flex flex-1 justify-center md:justify-start">
         <Link href="/">
-          <Image src={Logo} alt="De Mi Para Ti Logo" width={80} height={30} />
+          <Image
+            src={Logo}
+            alt="De Mi Para Ti Logo"
+            width={Logo.width}
+            height={Logo.height}
+            loading="eager"
+            fetchPriority="high"
+            sizes="80px"
+            className="h-auto w-[80px]"
+          />
         </Link>
       </div>
 
-      {/* Escritorio: Menú centrado */}
-      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+      <div className="absolute left-1/2 hidden -translate-x-1/2 transform md:block">
         <NavigationMenu>
-          <NavigationMenuList className="flex gap-6 items-center">
-            <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink>
-                  <span className="navlink">Inicio</span>
+          <NavigationMenuList className="flex items-center gap-6">
+            {navItems.map(({ href, label }) => (
+              <NavigationMenuItem key={href}>
+                <NavigationMenuLink asChild>
+                  <Link href={href}>
+                    <span className="navlink">{label}</span>
+                  </Link>
                 </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/sobremi" legacyBehavior passHref>
-                <NavigationMenuLink>
-                  <span className="navlink">Sobre mí</span>
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/productos" legacyBehavior passHref>
-                <NavigationMenuLink>
-                  <span className="navlink">Productos</span>
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
+              </NavigationMenuItem>
+            ))}
           </NavigationMenuList>
         </NavigationMenu>
       </div>
 
-      {/* Móvil: Menú desplegable */}
       {menuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#FFF6EA] shadow-md z-50">
+        <div className="absolute left-0 top-full z-50 w-full bg-[#FFF6EA] shadow-md md:hidden">
           <nav className="p-4">
             <ul className="flex flex-col space-y-4">
-              {[
-                { href: "/", label: "Inicio" },
-                { href: "/sobremi", label: "Sobre mí" },
-                { href: "/productos", label: "Productos" },
-                // { href: "#galeria", label: "Galería" },
-              ].map(({ href, label }) => (
+              {navItems.map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} legacyBehavior passHref>
-                    <a
-                      onClick={() => setMenuOpen(false)}
-                      className="text-lg font-medium text-gray-700 hover:text-pink-600 transition-colors"
-                    >
-                      {label}
-                    </a>
+                  <Link
+                    href={href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-lg font-medium text-gray-700 transition-colors hover:text-pink-600"
+                  >
+                    {label}
                   </Link>
                 </li>
               ))}
@@ -103,17 +95,16 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Estilos específicos */}
       <style jsx>{`
-        /* Underline animado para desktop */
         .navlink {
           position: relative;
           display: inline-block;
+          padding: 0.25rem 0;
           font-size: 1rem;
           font-weight: 500;
           color: #4a4a4a;
-          padding: 0.25rem 0;
         }
+
         .navlink::after {
           content: "";
           position: absolute;
@@ -125,9 +116,11 @@ export default function Navbar() {
           transform: translateY(8px);
           opacity: 0;
         }
+
         .navlink:hover::after {
           animation: writeUnderline 0.3s forwards;
         }
+
         @keyframes writeUnderline {
           0% {
             transform: translateY(8px);
@@ -143,11 +136,11 @@ export default function Navbar() {
           }
         }
 
-        /* WhatsApp tooltip */
         .whatsapp-container:hover .whatsapp-label {
-          opacity: 1;
           transform: translateX(0);
+          opacity: 1;
         }
+
         .whatsapp-label {
           transform: translateX(4px);
         }
@@ -155,6 +148,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-
-
