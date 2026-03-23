@@ -45,7 +45,7 @@ export default function Navbar() {
       </div>
 
       <div className="flex flex-1 justify-center md:justify-start">
-        <Link href="/">
+        <Link href="/" aria-label="Ir al inicio de De Mi Para Ti Pasteleria">
           <Image
             src={Logo}
             alt="De Mi Para Ti Logo"
@@ -76,7 +76,10 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="absolute left-0 top-full z-50 w-full bg-[#FFF6EA] shadow-md md:hidden">
+        <div
+          id="mobile-navigation"
+          className="absolute left-0 top-full z-50 w-full bg-[#FFF6EA] shadow-md md:hidden"
+        >
           <nav className="p-4">
             <ul className="flex flex-col space-y-4">
               {navItems.map(({ href, label }) => (
@@ -84,7 +87,7 @@ export default function Navbar() {
                   <Link
                     href={href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-lg font-medium text-gray-700 transition-colors hover:text-pink-600"
+                    className="text-lg font-medium text-gray-700 transition-colors hover:text-pink-700"
                   >
                     {label}
                   </Link>

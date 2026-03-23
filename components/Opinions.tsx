@@ -68,7 +68,7 @@ export default function Opinions() {
             >
               <div className="flex justify-center py-3 bg-white">
                 {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} className="text-pink-500" />
+                  <FaStar key={i} className="text-[#be185d]" />
                 ))}
               </div>
 
@@ -83,7 +83,7 @@ export default function Opinions() {
                 />
               </div>
 
-              <p className="text-center text-sm text-gray-600 py-3">
+              <p className="py-3 text-center text-sm text-gray-700">
                 Ver comentario en Instagram
               </p>
             </motion.a>

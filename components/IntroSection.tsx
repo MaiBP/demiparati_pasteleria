@@ -69,6 +69,7 @@ export default function FeaturesSection() {
       </motion.div>
 
       {/* Cards */}
+      <h2 className="sr-only">Por que elegir nuestra pasteleria artesanal</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
         {cards.map((item, i) => (
           <motion.div
@@ -87,13 +88,14 @@ export default function FeaturesSection() {
                 alt={item.title}
                 fill
                 sizes="150px"
+                quality={70}
                 className="object-cover rounded-md"
               />
             </div>
             <h3 className="font-semibold text-xl text-gray-800 mb-2">
               {item.title}
             </h3>
-            <p className="text-gray-600">{item.text}</p>
+            <p className="text-gray-700">{item.text}</p>
           </motion.div>
         ))}
       </div>
@@ -132,6 +134,7 @@ export default function FeaturesSection() {
               alt="Cupcakes decorados"
               fill
               sizes="300px"
+              quality={70}
               className="object-cover rounded-md"
             />
           </div>

@@ -91,6 +91,7 @@ export default async function CategoriaPage({
           __html: JSON.stringify(collectionJsonLd),
         }}
       />
+      <h2 className="sr-only">Otras categorias disponibles</h2>
       <div className="mx-auto mb-5 flex max-w-6xl flex-wrap justify-center gap-3">
         {otherCats.map((category) => (
           <Link
@@ -110,6 +111,7 @@ export default async function CategoriaPage({
         {cat.descripcion}
       </p>
 
+      <h2 className="sr-only">Galeria de trabajos en {cat.nombre}</h2>
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {cat.imagen.map((image, index) => {
           const { description = "", url } = image;

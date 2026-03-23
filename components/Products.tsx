@@ -19,6 +19,7 @@ export default function ProductsFullscreen() {
 
   return (
     <section className="w-screen h-screen grid grid-cols-2 grid-rows-2">
+      <h2 className="sr-only">Categorias de productos</h2>
       {(categorias as unknown as Categoria[]).map((cat) => {
         const isActive = !!active[cat.slug];
 
@@ -43,6 +44,7 @@ export default function ProductsFullscreen() {
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority={cat.slug === "infantiles" || cat.slug === "eventos-especiales"}
+                quality={70}
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>

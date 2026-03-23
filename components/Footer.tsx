@@ -1,68 +1,60 @@
-
 "use client";
 
 import Link from "next/link";
-import { FaInstagram, FaWhatsapp, FaGithub } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
-  const BUSINESS_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+  const businessNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
   return (
-    <footer className="bg-[#FFF6EA] py-8 px-6 text-gray-800">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-        {/* Redes Sociales & Contacto */}
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start gap-8">
-          {/* Instagram */}
+    <footer className="bg-[#FFF6EA] px-6 py-8 text-gray-800">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-6 md:grid-cols-2">
+        <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:items-start md:justify-start">
           <div className="flex flex-col items-center md:items-start">
-            <p className="font-semibold mb-1">Seguime</p>
+            <p className="mb-1 font-semibold">Seguime</p>
             <Link
               href="https://www.instagram.com/demiparatipasteleria"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-pink-600 transition-colors"
+              aria-label="Abrir Instagram de De Mi Para Ti Pasteleria"
+              className="text-gray-700 transition-colors hover:text-pink-700"
             >
               <FaInstagram className="text-2xl" />
             </Link>
           </div>
-          {/* WhatsApp */}
+
           <div className="flex flex-col items-center md:items-start">
-            <p className="font-semibold mb-1">Contacto</p>
+            <p className="mb-1 font-semibold">Contacto</p>
             <Link
-              href={`https://wa.me/${BUSINESS_NUMBER}`}
+              href={`https://wa.me/${businessNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              aria-label="Abrir WhatsApp de De Mi Para Ti Pasteleria"
+              className="text-gray-700 transition-colors hover:text-green-700"
             >
               <FaWhatsapp className="text-2xl" />
             </Link>
           </div>
         </div>
 
-        {/* Navegación & Copyright */}
-        <div className="flex flex-col md:flex-row items-center md:justify-end justify-center gap-6">
-          {/* Links */}
+        <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:justify-end">
           <nav className="flex space-x-4">
-            <Link
-              href="/sobremi"
-              className="hover:text-pink-600 transition-colors"
-            >
-              Sobre mí
+            <Link href="/sobremi" className="transition-colors hover:text-pink-700">
+              Sobre mi
             </Link>
-            <Link
-              href="/productos"
-              className="hover:text-pink-600 transition-colors"
-            >
+            <Link href="/productos" className="transition-colors hover:text-pink-700">
               Productos
             </Link>
           </nav>
-          {/* Copyright con GitHub */}
-          <p className="text-sm text-gray-600 flex items-center gap-1">
-            © 2025 —{" "}
+
+          <p className="flex items-center gap-1 text-sm text-gray-700">
+            © 2025 -
             <Link
               href="https://github.com/MaiBP"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center hover:text-gray-800 transition-colors"
+              aria-label="Abrir perfil de GitHub de MaiBP"
+              className="inline-flex items-center transition-colors hover:text-gray-900"
             >
               <FaGithub className="mr-1" /> MaiBP
             </Link>
@@ -72,4 +64,3 @@ export default function Footer() {
     </footer>
   );
 }
-
