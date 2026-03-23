@@ -14,7 +14,7 @@ import Logo from "@/public/img/logo.png";
 
 const navItems = [
   { href: "/", label: "Inicio" },
-  { href: "/sobremi", label: "Sobre mi" },
+  { href: "/sobremi", label: "Sobre mí" },
   { href: "/productos", label: "Productos" },
 ];
 
@@ -45,10 +45,10 @@ export default function Navbar() {
       </div>
 
       <div className="flex flex-1 justify-center md:justify-start">
-        <Link href="/" aria-label="Ir al inicio de De Mi Para Ti Pasteleria">
+        <Link href="/" aria-label="Ir al inicio de De Mi Para Ti Pastelería">
           <Image
             src={Logo}
-            alt="De Mi Para Ti Logo"
+            alt="Logo de De Mi Para Ti"
             width={Logo.width}
             height={Logo.height}
             loading="eager"

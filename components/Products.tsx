@@ -15,11 +15,11 @@ type Categoria = {
 };
 
 export default function ProductsFullscreen() {
-    const [active, setActive] = useState<Record<string, boolean>>({});
+  const [active, setActive] = useState<Record<string, boolean>>({});
 
   return (
-    <section className="w-screen h-screen grid grid-cols-2 grid-rows-2">
-      <h2 className="sr-only">Categorias de productos</h2>
+    <section className="grid h-screen w-screen grid-cols-2 grid-rows-2">
+      <h2 className="sr-only">Categorías de productos</h2>
       {(categorias as unknown as Categoria[]).map((cat) => {
         const isActive = !!active[cat.slug];
 
@@ -27,7 +27,6 @@ export default function ProductsFullscreen() {
           <Link
             key={cat.slug}
             href={`/productos/${cat.slug}`}
-            // primer click activa el blur, segundo deja pasar
             onClick={(e) => {
               if (!isActive) {
                 e.preventDefault();
@@ -36,7 +35,6 @@ export default function ProductsFullscreen() {
             }}
             className="relative overflow-hidden"
           >
-            {/* Imagen de fondo */}
             <div className="absolute inset-0">
               <Image
                 src={normalizeImagePath(cat.portada)}
@@ -49,7 +47,6 @@ export default function ProductsFullscreen() {
               />
             </div>
 
-            {/* Overlay: blur + texto */}
             <div
               className={`
                 absolute inset-0 
@@ -64,8 +61,7 @@ export default function ProductsFullscreen() {
             >
               <h3
                 className={`
-                  text-white text-3xl md:text-5xl font-extrabold
-                  transition-opacity duration-300
+                  text-3xl font-extrabold text-white transition-opacity duration-300 md:text-5xl
                   ${isActive ? "opacity-100" : "opacity-0"}
                 `}
               >
@@ -78,14 +74,3 @@ export default function ProductsFullscreen() {
     </section>
   );
 }
-
-
-
-
-
-
-
-
-
-
-

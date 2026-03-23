@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "De Mi Para Ti Pasteleria",
-  legalName: "De Mi Para Ti Pasteleria",
-  title: "De Mi Para Ti Pasteleria | Tortas personalizadas en Bella Vista",
+  name: "De Mi Para Ti Pastelería",
+  legalName: "De Mi Para Ti Pastelería",
+  title: "De Mi Para Ti Pastelería | Tortas personalizadas en Bella Vista",
   description:
-    "Pasteleria artesanal en Bella Vista con tortas personalizadas para cumpleaños, bodas, quince, eventos especiales y mesas dulces.",
+    "Pastelería artesanal en Bella Vista con tortas personalizadas para cumpleaños, bodas, quince, eventos especiales y mesas dulces.",
   locale: "es_AR",
   region: "AR-B",
   country: "AR",
@@ -15,15 +15,15 @@ export const siteConfig = {
   locality: "Bella Vista",
   areaServed: "Bella Vista y alrededores",
   keywords: [
-    "pasteleria en Bella Vista",
+    "pastelería en Bella Vista",
     "tortas personalizadas",
     "tortas para cumpleaños",
     "tortas para bodas",
     "tortas para quince",
     "mesas dulces",
-    "mini pasteleria",
-    "reposteria artesanal",
-    "De Mi Para Ti Pasteleria",
+    "mini pastelería",
+    "repostería artesanal",
+    "De Mi Para Ti Pastelería",
   ],
 };
 

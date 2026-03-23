@@ -35,21 +35,21 @@ export async function generateMetadata({
 
   if (!category) {
     return buildMetadata({
-      title: "Categoria no encontrada",
-      description: "La categoria solicitada no esta disponible.",
+      title: "Categoría no encontrada",
+      description: "La categoría solicitada no está disponible.",
       path: `/productos/${slug}`,
     });
   }
 
   return buildMetadata({
     title: category.nombre,
-    description: `${category.descripcion} Descubre trabajos reales, diseños personalizados y opciones para pedir tu torta en Bella Vista.`,
+    description: `${category.descripcion} Descubrí trabajos reales, diseños personalizados y opciones para pedir tu torta en Bella Vista.`,
     path: `/productos/${category.slug}`,
     image: normalizeImagePath(category.portada),
     keywords: [
       category.nombre,
       `tortas ${category.nombre.toLowerCase()}`,
-      "pasteleria Bella Vista",
+      "pastelería Bella Vista",
     ],
   });
 }
@@ -91,7 +91,7 @@ export default async function CategoriaPage({
           __html: JSON.stringify(collectionJsonLd),
         }}
       />
-      <h2 className="sr-only">Otras categorias disponibles</h2>
+      <h2 className="sr-only">Otras categorías disponibles</h2>
       <div className="mx-auto mb-5 flex max-w-6xl flex-wrap justify-center gap-3">
         {otherCats.map((category) => (
           <Link
@@ -111,7 +111,7 @@ export default async function CategoriaPage({
         {cat.descripcion}
       </p>
 
-      <h2 className="sr-only">Galeria de trabajos en {cat.nombre}</h2>
+      <h2 className="sr-only">Galería de trabajos en {cat.nombre}</h2>
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {cat.imagen.map((image, index) => {
           const { description = "", url } = image;

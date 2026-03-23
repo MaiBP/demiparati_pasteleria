@@ -16,7 +16,7 @@ export default function Footer() {
               href="https://www.instagram.com/demiparatipasteleria"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Abrir Instagram de De Mi Para Ti Pasteleria"
+              aria-label="Abrir Instagram de De Mi Para Ti Pastelería"
               className="text-gray-700 transition-colors hover:text-pink-700"
             >
               <FaInstagram className="text-2xl" />
@@ -29,7 +29,7 @@ export default function Footer() {
               href={`https://wa.me/${businessNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Abrir WhatsApp de De Mi Para Ti Pasteleria"
+              aria-label="Abrir WhatsApp de De Mi Para Ti Pastelería"
               className="text-gray-700 transition-colors hover:text-green-700"
             >
               <FaWhatsapp className="text-2xl" />
@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:justify-end">
           <nav className="flex space-x-4">
             <Link href="/sobremi" className="transition-colors hover:text-pink-700">
-              Sobre mi
+              Sobre mí
             </Link>
             <Link href="/productos" className="transition-colors hover:text-pink-700">
               Productos

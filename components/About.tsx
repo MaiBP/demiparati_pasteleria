@@ -47,30 +47,24 @@ export default function About() {
             className="font-medium uppercase text-[#9d174d]"
             variants={item}
           >
-            Sobre mi
+            Sobre mí
           </motion.span>
 
           <motion.h2
             className="mt-2 text-3xl font-bold text-gray-800 md:text-4xl"
             variants={item}
           >
-            Hola, soy Estefania
+            ¡Hola! Soy Estefanía
           </motion.h2>
 
-          <motion.p
-            className="mt-4 leading-relaxed text-gray-700"
-            variants={item}
-          >
-            Soy el corazón y alma detras de este emprendimiento. Mi amor por la
+          <motion.p className="mt-4 leading-relaxed text-gray-700" variants={item}>
+            Soy el corazón y alma detrás de este emprendimiento. Mi amor por la
             repostería comenzó en la cocina de mi hogar, donde descubrí la
             alegría de crear delicias que endulzan la vida de las personas.
           </motion.p>
 
-          <motion.p
-            className="mt-4 leading-relaxed text-gray-700"
-            variants={item}
-          >
-            Para mi, cada producto es una obra de arte, hecha con pasión,
+          <motion.p className="mt-4 leading-relaxed text-gray-700" variants={item}>
+            Para mí, cada producto es una obra de arte, hecha con pasión,
             creatividad y un compromiso con la calidad. Me enorgullece ofrecer
             productos que no solo son hermosos, sino también irresistiblemente
             deliciosos.

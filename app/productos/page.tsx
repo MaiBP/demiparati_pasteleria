@@ -6,12 +6,12 @@ import { absoluteUrl, buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Productos",
   description:
-    "Explora las categorias de productos de De Mi Para Ti Pasteleria: infantiles, eventos especiales, bodas y quince, y mini pasteleria.",
+    "Explorá las categorías de productos de De Mi Para Ti Pastelería: infantiles, eventos especiales, bodas y quince, y mini pastelería.",
   path: "/productos",
   image: "/img/evento.png",
   keywords: [
-    "catalogo de tortas",
-    "productos de pasteleria",
+    "catálogo de tortas",
+    "productos de pastelería",
     "tortas para cumpleaños y eventos",
   ],
 });
@@ -20,9 +20,9 @@ export default function HomePage() {
   const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Productos de pasteleria personalizada",
+    name: "Productos de pastelería personalizada",
     description:
-      "Catalogo de categorias de tortas personalizadas y mini pasteleria.",
+      "Catálogo de categorías de tortas personalizadas y mini pastelería.",
     url: absoluteUrl("/productos"),
     hasPart: categories.map((category) => ({
       "@type": "CollectionPage",
@@ -39,7 +39,7 @@ export default function HomePage() {
           __html: JSON.stringify(collectionJsonLd),
         }}
       />
-      <h1 className="sr-only">Productos de pasteleria personalizada</h1>
+      <h1 className="sr-only">Productos de pastelería personalizada</h1>
       <Products />
     </main>
   );

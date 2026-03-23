@@ -6,12 +6,12 @@ import { absoluteUrl, buildMetadata, siteConfig } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Tortas personalizadas en Bella Vista",
   description:
-    "Descubri tortas artesanales y personalizadas para cumpleaños, bodas, quince y eventos especiales en Bella Vista. Diseños a medida y contacto directo por WhatsApp.",
+    "Descubrí tortas artesanales y personalizadas para cumpleaños, bodas, quince y eventos especiales en Bella Vista. Diseños a medida y contacto directo por WhatsApp.",
   path: "/",
   image: "/img/hero/portada-1111.png",
   keywords: [
     "tortas personalizadas en Bella Vista",
-    "pasteleria artesanal",
+    "pastelería artesanal",
     "tortas para eventos",
   ],
 });
