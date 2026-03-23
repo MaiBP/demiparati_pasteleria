@@ -36,6 +36,7 @@ export default function FloatingWhatsApp() {
           alt="WhatsApp"
           fill
           sizes="56px"
+          quality={50}
           className="object-cover"
         />
       </div>

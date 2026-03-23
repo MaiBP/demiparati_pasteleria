@@ -73,7 +73,7 @@ export default function HeroSection() {
                   loading={idx < 2 ? "eager" : "lazy"}
                   fetchPriority={idx < 2 ? "high" : undefined}
                   sizes={image.sizes}
-                  quality={70}
+                  quality={60}
                   className="object-cover object-center transition-transform duration-300 hover:scale-105"
                 />
               </motion.div>

@@ -44,7 +44,7 @@ export default function ProductsFullscreen() {
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority={cat.slug === "infantiles" || cat.slug === "eventos-especiales"}
-                quality={70}
+                quality={60}
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>

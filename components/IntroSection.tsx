@@ -88,7 +88,7 @@ export default function FeaturesSection() {
                 alt={item.title}
                 fill
                 sizes="150px"
-                quality={70}
+                quality={60}
                 className="object-cover rounded-md"
               />
             </div>
@@ -133,8 +133,8 @@ export default function FeaturesSection() {
               src={cupcakesImg }
               alt="Cupcakes decorados"
               fill
-              sizes="300px"
-              quality={70}
+              sizes="(max-width: 768px) 280px, 300px"
+              quality={60}
               className="object-cover rounded-md"
             />
           </div>
